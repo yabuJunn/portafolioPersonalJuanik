@@ -3,16 +3,21 @@ import "./landingServicesCards.css"
 import arrowRigthBlue from "../../../assets/svg/landingPage/arrowRightBlue.svg"
 import iconMock from "../../../assets/svg/icons/personIconBlue.svg"
 
+type LandingServicesCardsProps = {
+    cardTitle: string;
+    cardDescription: string;
+    cardIcon: string;
+}
 
-export const LandingServicesCards = () => {
+export const LandingServicesCards = ({ cardTitle, cardDescription, cardIcon }: LandingServicesCardsProps) => {
     return <>
         <div className={"landingPage-services-content-cards-container"}>
             <div className={"landingPage-services-content-cards-container-icon"}>
-                <img src={iconMock} alt={iconMock} />
+                <img src={cardIcon} alt={cardIcon} />
             </div>
 
-            <h4>Experiencias Interactivas & Prototipado</h4>
-            <p>Creación de instalaciones y prototipos interactivos (web, sensores, mapping) que combinan sonido, visuales y hardware para eventos, museos y espacios experienciales.</p>
+            <h4>{cardTitle}</h4>
+            <p>{cardDescription}</p>
 
             <div className={"landingPage-services-content-cards-container-learn-more"}>
                 <p>Learn more</p>
