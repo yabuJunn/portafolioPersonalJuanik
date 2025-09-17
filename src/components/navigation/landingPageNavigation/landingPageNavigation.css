@@ -13,6 +13,8 @@
     align-items: center;
     justify-content: space-between;
 
+    padding: 0 0.5% 0 0.5%;
+
     border-radius: 5rem;
     /* opcional, para estilo */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -21,7 +23,6 @@
 }
 
 .landingPage-navigation-container img {
-    margin-left: 0.4rem;
     height: 80%;
     cursor: pointer;
 }
@@ -60,29 +61,4 @@
 .landingPage-navigation-container li:hover {
     color: #FFC857;
     /* efecto hover opcional */
-}
-
-.landingPage-navigation-container button {
-    margin-right: 0.4rem;
-    height: 80%;
-    border-radius: 5rem;
-    border: none;
-    width: 10vw;
-    background-color: #2563EB;
-
-    color: var(--Light, #FFFDFB);
-    text-align: center;
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s;
-}
-
-.landingPage-navigation-container button:hover {
-    background-color: #FFC857;
 }

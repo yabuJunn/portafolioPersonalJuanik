@@ -46,36 +46,6 @@
     height: 8vh;
 }
 
-.landingPage-header-content-text-buttons .landingPage-header-content-text-buttons-right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background-color: transparent;
-    border-radius: 5rem;
-    border: 0.1rem solid var(--Main-3, #2563EB);
-    width: 8vw;
-
-    cursor: pointer;
-
-    color: var(--Main-3, #2563EB);
-    text-align: center;
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
-    transition: background-color 0.3s;
-    transition: color 0.3s;
-}
-
-.landingPage-header-content-text-buttons .landingPage-header-content-text-buttons-right:hover {
-    background-color: #2563EB;
-    color: var(--Light, #FFFDFB);
-}
-
 .landingPage-header-content-image {
     width: 40%;
     display: flex;

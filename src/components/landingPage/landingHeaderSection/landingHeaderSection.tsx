@@ -1,6 +1,7 @@
 import "./landingHeaderSection.css"
 
 import { ButtonWithIcon } from "../../buttons/buttonWhithIcon/buttonWhithIcon"
+import { MainButton } from "../../buttons/mainButton/mainButton"
 
 import landingPageHeaderImage from "../../../assets/png/landingPage/landingPageHeaderPhoto.png"
 import arrowRigthDark from "../../../assets/svg/landingPage/arrowRightDark.svg"
@@ -14,9 +15,10 @@ export const LandingHeaderSectionContent = () => {
             <div className={"landingPage-header-content-text-buttons"}>
                 <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} />
 
-                <button className={"landingPage-header-content-text-buttons-right"}>
+                {/* <button className={"landingPage-header-content-text-buttons-right"}>
                     Hire me
-                </button>
+                </button> */}
+                <MainButton text="Hire me" actionFunction={() => { console.log("Hire me clicked") }} />
             </div>
         </div>
 
