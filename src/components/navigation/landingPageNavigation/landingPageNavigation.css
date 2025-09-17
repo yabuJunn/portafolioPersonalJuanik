@@ -1,12 +1,12 @@
 .landingPage-navigation-container {
     position: fixed;
-    top: 5rem;
+    top: 4.5rem;
     left: 50%;
     transform: translate(-50%, -50%);
 
     width: 80%;
     /* puedes ajustar el ancho */
-    height: 10vh;
+    height: 8vh;
     background-color: #FFFDFB;
 
     display: flex;
@@ -20,8 +20,9 @@
 }
 
 .landingPage-navigation-container img {
-    margin-left: 0.6rem;
+    margin-left: 0.4rem;
     height: 80%;
+    cursor: pointer;
 }
 
 .landingPage-navigation-container ul {
@@ -56,12 +57,12 @@
 }
 
 .landingPage-navigation-container li:hover {
-    color: #ff9900;
+    color: #FFC857;
     /* efecto hover opcional */
 }
 
 .landingPage-navigation-container button {
-    margin-right: 0.6rem;
+    margin-right: 0.4rem;
     height: 80%;
     border-radius: 5rem;
     border: none;
@@ -75,4 +76,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.landingPage-navigation-container button:hover {
+    background-color: #FFC857;
 }
