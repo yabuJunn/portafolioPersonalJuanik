@@ -26,3 +26,12 @@
     width: 100%;
     height: 8vh;
 }
+
+.landingPage-services-cards-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2%;
+}

@@ -1,0 +1,63 @@
+.landingPage-services-content-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    gap: 1.5rem;
+    padding: 1.5%;
+    border-radius: 2%;
+
+    background-color: #FFFDFB;
+}
+
+.landingPage-services-content-cards-container-icon {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    background-color: #F472B6;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingPage-services-content-cards-container-icon img {
+    width: 85%;
+}
+
+.landingPage-services-content-cards-container h4 {
+    color: var(--Main-3, #2563EB);
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.landingPage-services-content-cards-container p {
+    color: var(--Dark, #1E293B);
+    font-family: Sora;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.landingPage-services-content-cards-container-learn-more {
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    cursor: pointer;
+    height: 1rem;
+}
+
+.landingPage-services-content-cards-container-learn-more p {
+    font-size: 0.90rem;
+    transition: all 0.3s;
+}
+
+.landingPage-services-content-cards-container-learn-more p:hover {
+    font-size: 0.90rem;
+    color: #2563EB;
+}

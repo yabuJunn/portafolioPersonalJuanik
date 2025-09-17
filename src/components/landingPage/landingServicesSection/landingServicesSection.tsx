@@ -2,6 +2,7 @@ import "./landingServicesSection.css"
 
 import { ButtonWithIcon } from "../../buttons/buttonWhithIcon/buttonWhithIcon"
 import { LandingTitleText } from "../landingTitleText/landingTitleText"
+import { LandingServicesCards } from "../landingServicesCards/landingServicesCards"
 
 import arrowRigthDark from "../../../assets/svg/landingPage/arrowRightDark.svg"
 
@@ -13,6 +14,12 @@ export const LandingServicesSection = () => {
                 <div className={"landingPage-services-content-text-header"}>
                     <LandingTitleText highlightText="Services" titleText="that I provide" />
                     <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} bgColor="#FF6F3C" hoverTextColor="#FFFDFB" actionFunction={() => { console.log("View my portfolio clicked") }} />
+                </div>
+
+                <div className={"landingPage-services-cards-container"}>
+                    <LandingServicesCards></LandingServicesCards>
+                    <LandingServicesCards></LandingServicesCards>
+                    <LandingServicesCards></LandingServicesCards>
                 </div>
             </div>
         </section>
