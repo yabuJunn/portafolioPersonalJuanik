@@ -13,7 +13,7 @@ export const LandingHeaderSectionContent = () => {
             <p>I’m an Interactive Media Designer and Musician, focused on creating immersive user experiences that merge art, technology, and sound. I combine UX/UI design, creative coding, and music production to develop innovative projects that inspire and generate real impact.</p>
 
             <div className={"landingPage-header-content-text-buttons"}>
-                <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} />
+                <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} bgColor="#FF6F3C" hoverTextColor="#FFFDFB" actionFunction={() => { console.log("View my portfolio clicked") }} />
 
                 {/* <button className={"landingPage-header-content-text-buttons-right"}>
                     Hire me

@@ -26,7 +26,7 @@
 .landingPage-sectionDivider .landingPage-sectionDivider-lineTransform2 {
     width: 150vw;
     height: 10vh;
-    background: var(--Main-2, #10B981);
+    background: var(--Main-2, #F472B6);
     transform: rotate(-4deg);
     position: relative;
     top: -20vh;
