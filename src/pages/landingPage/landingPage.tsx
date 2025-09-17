@@ -4,6 +4,7 @@ import { LandingPageNavigation } from "../../components/navigation/landingPageNa
 import { LandingHeaderSectionContent } from "../../components/landingPage/landingHeaderSection/landingHeaderSection"
 import { LandingSectionDivider } from "../../components/landingPage/landingSectionDivider/landingSectionDivider"
 import { LandingServicesSection } from "../../components/landingPage/landingServicesSection/landingServicesSection"
+import { LandingAboutMeSection } from "../../components/landingPage/landingAboutMeSection/landingAboutMeSection"
 
 export const LandingPage = () => {
     return <>
@@ -16,6 +17,7 @@ export const LandingPage = () => {
                 </section>
                 <LandingSectionDivider></LandingSectionDivider>
                 <LandingServicesSection></LandingServicesSection>
+                <LandingAboutMeSection></LandingAboutMeSection>
             </div>
 
         </main >

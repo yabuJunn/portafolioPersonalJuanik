@@ -1,7 +1,6 @@
 import "./landingServicesCards.css"
 
 import arrowRigthBlue from "../../../assets/svg/landingPage/arrowRightBlue.svg"
-import iconMock from "../../../assets/svg/icons/personIconBlue.svg"
 
 type LandingServicesCardsProps = {
     cardTitle: string;
@@ -23,7 +22,6 @@ export const LandingServicesCards = ({ cardTitle, cardDescription, cardIcon }: L
                 <p>Learn more</p>
                 <img src={arrowRigthBlue} alt={arrowRigthBlue} />
             </div>
-
         </div>
     </>
 }
