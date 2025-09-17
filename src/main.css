@@ -6,6 +6,11 @@ body {
   min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+    /* Oculta la barra de desplazamiento */
+}
+
 #root {
   width: 100%;
   min-height: 100vh;

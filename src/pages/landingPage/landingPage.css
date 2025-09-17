@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    overflow: hidden;
 }
 
 .landingPage .landingPage-container {
@@ -16,7 +18,15 @@
 
 .landingPage .landingPage-section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
+    margin-top: 10vh;
 }
 
-.landingPage .landingPage-header {}
+.landingPage .landingPage-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+}
