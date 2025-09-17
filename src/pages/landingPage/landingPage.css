@@ -1,0 +1,22 @@
+.landingPage {
+    background-color: #FFC857;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landingPage .landingPage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 85%;
+}
+
+.landingPage .landingPage-section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.landingPage .landingPage-header {}

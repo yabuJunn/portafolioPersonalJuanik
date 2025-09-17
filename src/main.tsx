@@ -1,5 +1,17 @@
-import { render } from 'preact'
-import './index.css'
-import { App } from './app.tsx'
+import './main.css'
 
-render(<App />, document.getElementById('app')!)
+import { StrictMode } from 'react'
+import { RouterProvider } from 'react-router'
+import { createRoot } from 'preact/compat/client'
+import { createHashRouter } from 'react-router'
+import { mainRoutes } from './routes/mainRoutes'
+
+const router = createHashRouter([
+    ...mainRoutes
+])
+
+createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+        <RouterProvider router={router} />
+    </StrictMode>,
+)
