@@ -1,0 +1,78 @@
+.landingPage-navigation-container {
+    position: fixed;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    /* puedes ajustar el ancho */
+    height: 10vh;
+    background-color: #FFFDFB;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 5rem;
+    /* opcional, para estilo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* opcional */
+}
+
+.landingPage-navigation-container img {
+    margin-left: 0.6rem;
+    height: 80%;
+}
+
+.landingPage-navigation-container ul {
+    list-style: none;
+    /* quita los puntos */
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    /* coloca los <li> en fila */
+    gap: 2rem;
+    /* espacio entre los items */
+    justify-content: flex-end;
+    /* manda todo a la derecha */
+    align-items: center;
+
+    color: var(--Dark, #1E293B);
+    text-align: center;
+    font-family: Sora;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.landingPage-navigation-container li {
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    /* color del texto */
+    transition: color 0.3s;
+}
+
+.landingPage-navigation-container li:hover {
+    color: #ff9900;
+    /* efecto hover opcional */
+}
+
+.landingPage-navigation-container button {
+    margin-right: 0.6rem;
+    height: 80%;
+    border-radius: 5rem;
+    border: none;
+    width: 10vw;
+    background-color: #2563EB;
+
+    color: var(--Light, #FFFDFB);
+    text-align: center;
+    font-family: Sora;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
