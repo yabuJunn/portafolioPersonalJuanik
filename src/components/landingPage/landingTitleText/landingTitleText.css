@@ -1,0 +1,17 @@
+.landingTitleText {
+    color: var(--Dark, #1E293B);
+    font-family: Sora;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.landingTitleText span{
+    color: var(--Main-3, #2563EB);
+    font-family: Sora;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

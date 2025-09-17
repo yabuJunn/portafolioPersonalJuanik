@@ -1,0 +1,28 @@
+/* .landingPage-services {} */
+
+.landingPage-services-content-text-header-container {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.landingPage-services-content-text-header-title {
+    color: var(--Main-3, #2563EB);
+    font-family: Sora;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.landingPage-services-content-text-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+}

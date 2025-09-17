@@ -15,9 +15,6 @@ export const LandingHeaderSectionContent = () => {
             <div className={"landingPage-header-content-text-buttons"}>
                 <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} bgColor="#FF6F3C" hoverTextColor="#FFFDFB" actionFunction={() => { console.log("View my portfolio clicked") }} />
 
-                {/* <button className={"landingPage-header-content-text-buttons-right"}>
-                    Hire me
-                </button> */}
                 <MainButton text="Hire me" actionFunction={() => { console.log("Hire me clicked") }} />
             </div>
         </div>

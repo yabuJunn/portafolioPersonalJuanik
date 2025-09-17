@@ -3,6 +3,7 @@ import "./landingPage.css"
 import { LandingPageNavigation } from "../../components/navigation/landingPageNavigation/landingPageNavigation"
 import { LandingHeaderSectionContent } from "../../components/landingPage/landingHeaderSection/landingHeaderSection"
 import { LandingSectionDivider } from "../../components/landingPage/landingSectionDivider/landingSectionDivider"
+import { LandingServicesSection } from "../../components/landingPage/landingServicesSection/landingServicesSection"
 
 export const LandingPage = () => {
     return <>
@@ -14,6 +15,7 @@ export const LandingPage = () => {
                     <LandingHeaderSectionContent></LandingHeaderSectionContent>
                 </section>
                 <LandingSectionDivider></LandingSectionDivider>
+                <LandingServicesSection></LandingServicesSection>
             </div>
 
         </main >
