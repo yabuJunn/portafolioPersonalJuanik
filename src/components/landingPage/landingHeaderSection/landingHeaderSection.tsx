@@ -1,7 +1,9 @@
 import "./landingHeaderSection.css"
 
+import { ButtonWithIcon } from "../../buttons/buttonWhithIcon/buttonWhithIcon"
+
 import landingPageHeaderImage from "../../../assets/png/landingPage/landingPageHeaderPhoto.png"
-import whiteCircleRightArrrow from "../../../assets/svg/landingPage/whiteCircleArrowRigth.svg"
+import arrowRigthDark from "../../../assets/svg/landingPage/arrowRightDark.svg"
 
 export const LandingHeaderSectionContent = () => {
     return <>
@@ -10,10 +12,7 @@ export const LandingHeaderSectionContent = () => {
             <p>I’m an Interactive Media Designer and Musician, focused on creating immersive user experiences that merge art, technology, and sound. I combine UX/UI design, creative coding, and music production to develop innovative projects that inspire and generate real impact.</p>
 
             <div className={"landingPage-header-content-text-buttons"}>
-                <div className={"landingPage-header-content-text-buttons-left"}>
-                    <button>View my portfolio</button>
-                    <img src={whiteCircleRightArrrow} alt="Arrow pointing right" />
-                </div>
+                <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} />
 
                 <button className={"landingPage-header-content-text-buttons-right"}>
                     Hire me

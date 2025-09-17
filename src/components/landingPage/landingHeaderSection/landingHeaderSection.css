@@ -46,49 +46,6 @@
     height: 8vh;
 }
 
-.landingPage-header-content-text-buttons .landingPage-header-content-text-buttons-left {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    background-color: #FF6F3C;
-    border-radius: 5rem;
-
-    cursor: pointer;
-}
-
-.landingPage-header-content-text-buttons .landingPage-header-content-text-buttons-left button {
-    margin-right: 0.4rem;
-    height: 85%;
-    border-radius: 5rem;
-    border: none;
-    width: 14vw;
-    background-color: #2563EB;
-
-    cursor: pointer;
-
-    color: var(--Light, #FFFDFB);
-    text-align: center;
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
-    margin-left: 0.3rem;
-
-    transition: background-color 0.3s;
-}
-
-.landingPage-header-content-text-buttons .landingPage-header-content-text-buttons-left img {
-    height: 85%;
-    margin-right: 0.3rem;
-}
-
-.landingPage-header-content-text-buttons .landingPage-header-content-text-buttons-left button:hover {
-    background-color: #1E40AF;
-}
-
 .landingPage-header-content-text-buttons .landingPage-header-content-text-buttons-right {
     display: flex;
     flex-direction: row;
