@@ -1,0 +1,131 @@
+:root {
+    /* fallback values */
+    --mi-bg: #ffffff;
+    --mi-text: #111827;
+    --mi-label: #111827;
+    --mi-placeholder: #9ca3af;
+}
+
+/* Wrapper del componente */
+.mainInput {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    /* ocupa todo el ancho del contenedor padre */
+    min-width: 0;
+    /* importante para que flex children no overflow */
+    box-sizing: border-box;
+    margin-bottom: 2%;
+}
+
+/* Label */
+.mainInput-label {
+    font-size: 0.9rem;
+    color: var(--mi-label);
+    margin-left: 2px;
+
+    color: var(--Light, #FFFDFB);
+    font-family: Sora;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Campo común (input / textarea / select) */
+.mainInput-field {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    background: var(--mi-bg);
+    color: var(--mi-text);
+    border: none;
+    outline: none;
+    padding: 0.75rem 0.75rem;
+    border-radius: 1rem;
+    font-family: Sora;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    /* placeholder color controlled by CSS variable */
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* placeholder styling */
+.mainInput-field::placeholder {
+    color: var(--mi-placeholder);
+    opacity: 1;
+}
+
+/* textarea specifics */
+.mainInput-textarea {
+    line-height: 1.4;
+    overflow: hidden;
+    /* autopopulate height when stretch */
+    resize: vertical;
+    /* fallback if stretch = false */
+    min-height: 48px;
+    max-height: 60vh;
+}
+
+/* select specifics */
+.mainInput-field[type="select"],
+.mainInput-field:where(select) {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--mi-text) 50%),
+        linear-gradient(135deg, var(--mi-text) 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 2.5rem;
+}
+
+/* focus style (optional) */
+.mainInput-field:focus {
+    box-shadow: 0 4px 18px rgba(16, 24, 40, 0.08);
+}
+
+/* SMALL UTIL: a row wrapper to place inputs side-by-side */
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Each .mainInput inside a .form-row will take an equal share */
+.form-row>.mainInput {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+/* If you want to force a full width item even inside form-row, use .full */
+.form-row>.mainInput.full {
+    flex-basis: 100%;
+}
+
+/* select por defecto muestra el color de placeholder */
+.mainInput-field.select {
+    color: var(--mi-placeholder);
+}
+
+/* cuando tiene valor (clase .has-value) cambia al color de texto normal */
+.mainInput-field.select.has-value {
+    color: var(--mi-text);
+}
+
+/* opcional: mantener icono flecha con mismo color */
+.mainInput-field.select {
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--mi-text) 50%),
+        linear-gradient(135deg, var(--mi-text) 50%, transparent 50%);
+}
+
+/* si quieres que la flecha también cambie cuando tenga valor */
+.mainInput-field.select.has-value {
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--mi-text) 50%),
+        linear-gradient(135deg, var(--mi-text) 50%, transparent 50%);
+}

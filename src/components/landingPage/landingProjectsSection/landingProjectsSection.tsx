@@ -13,7 +13,7 @@ export const LandingProjectsSection = () => {
                 <h3 className={"landingPage-projects-content-text-header-title"}>Projects</h3>
                 <div className={"landingPage-projects-content-text-header"}>
                     <LandingTitleText highlightText="Projects" titleText="that I have worked on" />
-                    <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} bgColor="#FF6F3C" hoverTextColor="#FFFDFB" actionFunction={() => { console.log("View my portfolio clicked") }} />
+                    <ButtonWithIcon text="View all my projects" icon={arrowRigthDark} bgColor="#FF6F3C" hoverTextColor="#FFFDFB" actionFunction={() => { console.log("View my portfolio clicked") }} />
                 </div>
 
                 <div className={"landingPage-projects-cards-container"}>

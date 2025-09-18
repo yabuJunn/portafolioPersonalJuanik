@@ -1,6 +1,6 @@
 #contactSection {
     width: 120%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +12,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2%;
-    margin-left: 8%;
+    margin-left: 6%;
 }
 
 
@@ -46,6 +47,14 @@
 
 .landingPage-contact-content-description span {
     font-weight: 700;
+}
+
+.landingPage-contact-content-inputs-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    margin-top: 2%;
+    align-items: center;
 }
 
 .landingPage-contact-content-image-container {
