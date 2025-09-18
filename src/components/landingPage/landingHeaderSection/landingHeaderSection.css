@@ -1,3 +1,7 @@
+#headerSection {
+    margin-top: 14vh;
+}
+
 .landingPage-header-content-text {
     display: flex;
     flex-direction: column;

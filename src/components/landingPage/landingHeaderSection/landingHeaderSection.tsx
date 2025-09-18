@@ -8,7 +8,7 @@ import arrowRigthDark from "../../../assets/svg/landingPage/arrowRightDark.svg"
 
 export const LandingHeaderSectionContent = () => {
     return <>
-        <div className={"landingPage-header-content-text"}>
+        <div className={"landingPage-header-content-text"} id={"headerSection"}>
             <h1>Hello I’m <span>Juanik</span>,<br></br> Interactive Media Designer & Music Producer</h1>
             <p>I’m an Interactive Media Designer and Musician, focused on creating immersive user experiences that merge art, technology, and sound. I combine UX/UI design, creative coding, and music production to develop innovative projects that inspire and generate real impact.</p>
 

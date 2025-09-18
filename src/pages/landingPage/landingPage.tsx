@@ -6,6 +6,7 @@ import { LandingSectionDivider } from "../../components/landingPage/landingSecti
 import { LandingServicesSection } from "../../components/landingPage/landingServicesSection/landingServicesSection"
 import { LandingAboutMeSection } from "../../components/landingPage/landingAboutMeSection/landingAboutMeSection"
 import { LandingProjectsSection } from "../../components/landingPage/landingProjectsSection/landingProjectsSection"
+import { LandingContactSection } from "../../components/landingPage/landingContactSection/landingContactSection"
 
 export const LandingPage = () => {
     return <>
@@ -20,6 +21,7 @@ export const LandingPage = () => {
                 <LandingServicesSection></LandingServicesSection>
                 <LandingAboutMeSection></LandingAboutMeSection>
                 <LandingProjectsSection></LandingProjectsSection>
+                <LandingContactSection></LandingContactSection>
             </div>
 
         </main >

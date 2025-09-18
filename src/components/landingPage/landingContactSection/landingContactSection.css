@@ -1,0 +1,74 @@
+#contactSection {
+    width: 120%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2563EB;
+}
+
+.landingPage-contact-content-text-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    margin-left: 8%;
+}
+
+
+.landingPage-contact-content-title {
+    color: var(--Light, #FFFDFB);
+    font-family: Sora;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.landingPage-contact-content-subtitle {
+    color: var(--Main-1, #FFC857);
+    font-family: Sora;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.landingPage-contact-content-description {
+    color: var(--Light, #FFFDFB);
+    font-family: Sora;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.landingPage-contact-content-description span {
+    font-weight: 700;
+}
+
+.landingPage-contact-content-image-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.landingPage-contact-content-image {
+    height: 80%;
+    aspect-ratio: 1 / 1.3;
+    background-color: #10B981;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    margin-left: 16%;
+    border-radius: 2%;
+}
+
+.landingPage-contact-content-image img {
+    height: 100%;
+}
