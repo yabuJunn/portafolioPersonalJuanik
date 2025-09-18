@@ -1,0 +1,33 @@
+#projectsSection {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding-bottom: 10vh;
+}
+
+.landingPage-projects-content-text-header-container {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.landingPage-projects-content-text-header-title {
+    color: var(--Main-3, #2563EB);
+    font-family: Sora;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.landingPage-projects-content-text-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+}
