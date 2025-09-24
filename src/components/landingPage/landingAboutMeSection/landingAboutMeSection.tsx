@@ -1,6 +1,6 @@
 import "./landingAboutMeSection.css"
 
-import aboutMeJuanikPhoto from "../../../assets/png/landingPage/aboutMeJuanikPhoto.png"
+import aboutMeJuanikPhoto from "../../../assets/webp/aboutMeJuanikPhoto.webp"
 import aboutMeGraphicStrips from "../../../assets/svg/landingPage/aboutMeGraphicStrips.svg"
 import aboutMeStarsIcon from "../../../assets/svg/landingPage/aboutMeStarsIcon.svg"
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { MainButton } from "../../buttons/mainButton/mainButton";
 import { MainInput } from "../../inputs/mainInput/mainInput";
 
-import contactJuanikPhoto from "../../../assets/png/landingPage/contactJuanikPhoto.png";
+import contactJuanikPhoto from "../../../assets/webp/contactJuanikPhoto.webp";
 
 import { send } from "@emailjs/browser";
 

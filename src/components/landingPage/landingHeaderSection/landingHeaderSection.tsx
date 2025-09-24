@@ -3,7 +3,7 @@ import "./landingHeaderSection.css"
 import { ButtonWithIcon } from "../../buttons/buttonWhithIcon/buttonWhithIcon"
 import { MainButton } from "../../buttons/mainButton/mainButton"
 
-import landingPageHeaderImage from "../../../assets/png/landingPage/landingPageHeaderPhoto.png"
+import landingPageHeaderImage from "../../../assets/webp/landingPageHeaderPhoto.webp"
 import arrowRigthDark from "../../../assets/svg/landingPage/arrowRightDark.svg"
 
 export const LandingHeaderSectionContent = () => {

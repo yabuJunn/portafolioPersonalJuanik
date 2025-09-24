@@ -5,9 +5,9 @@ import { LandingTitleText } from "../landingTitleText/landingTitleText"
 import { LandingProjectCard } from "../landingProjectCard/landingProjectCard"
 
 import arrowRigthDark from "../../../assets/svg/landingPage/arrowRightDark.svg"
-import projectImage1 from "../../../assets/jpg/landing/projectJaramilloMora.jpg"
-import projectImage2 from "../../../assets/jpg/landing/projectLudos.jpg"
-import projectImage3 from "../../../assets/jpg/landing/projectCapy.jpg"
+import projectImage1 from "../../../assets/webp/projectJaramilloMora.webp"
+import projectImage2 from "../../../assets/webp/projectLudos.webp"
+import projectImage3 from "../../../assets/webp/projectCapy.webp"
 
 export const LandingProjectsSection = () => {
     return <>
