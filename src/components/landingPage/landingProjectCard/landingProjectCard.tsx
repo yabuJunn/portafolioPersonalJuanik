@@ -7,9 +7,10 @@ type LandingProjectsCardsProps = {
     cardSubtitle: string;
     cardDescription: string;
     cardImage: string;
+    cardProjectLink: string;
 }
 
-export const LandingProjectCard = ({ cardTitle, cardSubtitle, cardDescription, cardImage }: LandingProjectsCardsProps) => {
+export const LandingProjectCard = ({ cardTitle, cardSubtitle, cardDescription, cardImage, cardProjectLink }: LandingProjectsCardsProps) => {
     return <>
         <div className={"landingPage-project-content-card-container"}>
             <div className={"landingPage-project-content-card-image"}>
@@ -23,10 +24,10 @@ export const LandingProjectCard = ({ cardTitle, cardSubtitle, cardDescription, c
 
             <p className={"landingPage-project-content-card-description"}>{cardDescription}</p>
 
-            <div className={"landingPage-project-content-cards-container-learn-more"}>
+            <a href={cardProjectLink} className={"landingPage-project-content-cards-container-learn-more"}>
                 <p>Learn more</p>
                 <img src={arrowRigthBlue} alt={arrowRigthBlue} />
-            </div>
+            </a>
         </div>
     </>
 }
