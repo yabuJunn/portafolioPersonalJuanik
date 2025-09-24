@@ -1,0 +1,97 @@
+.main-footer-container {
+    width: 100vw;
+    height: 50vh;
+    background-color: #F472B6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-footer-container .main-footer-head-title {
+    color: var(--Light, #FFFDFB);
+    text-align: center;
+    font-family: Sora;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 2%;
+}
+
+.main-footer-container hr {
+    width: 85%;
+    height: 1px;
+    background-color: #FFFDFB;
+    border-radius: 1%;
+}
+
+.main-footer-content-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 85%;
+    height: 30%;
+    padding: 1% 0 1% 0;
+}
+
+.main-footer-content-container .main-footer-logo {
+    height: 50%;
+}
+
+.main-footer-content-container-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    gap: 0.4vw;
+}
+
+.main-footer-content-container-info-container .main-footer-info-socials-container {
+    display: flex;
+    gap: 0.3vw;
+}
+
+.main-footer-content-container-info-container .main-footer-info-socials-container img {
+    cursor: pointer;
+}
+
+.main-footer-content-container-info-container h5 {
+    color: var(--Light, #FFFDFB);
+    font-family: Sora;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-footer-content-container-info-container h6 {
+    color: var(--Light, #FFFDFB);
+    font-family: Sora;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-footer-content-container-info-container p {
+    color: var(--Light, #FFFDFB);
+    font-family: Sora;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-footer-final-content-container {
+    display: flex;
+    width: 85%;
+}
+
+.main-footer-final-content-container p {
+    color: var(--Light, #FFFDFB);
+    font-family: Sora;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

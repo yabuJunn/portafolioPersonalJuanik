@@ -7,6 +7,7 @@ import { LandingServicesSection } from "../../components/landingPage/landingServ
 import { LandingAboutMeSection } from "../../components/landingPage/landingAboutMeSection/landingAboutMeSection"
 import { LandingProjectsSection } from "../../components/landingPage/landingProjectsSection/landingProjectsSection"
 import { LandingContactSection } from "../../components/landingPage/landingContactSection/landingContactSection"
+import { MainFooter } from "../../components/footers/mainFooter/mainFooter"
 
 export const LandingPage = () => {
     return <>
@@ -23,7 +24,7 @@ export const LandingPage = () => {
                 <LandingProjectsSection></LandingProjectsSection>
                 <LandingContactSection></LandingContactSection>
             </div>
-
+            <MainFooter></MainFooter>
         </main >
     </>
 }
