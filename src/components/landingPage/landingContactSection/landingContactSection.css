@@ -81,3 +81,11 @@
 .landingPage-contact-content-image img {
     height: 100%;
 }
+
+.text-status {
+    font-family: Sora;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
