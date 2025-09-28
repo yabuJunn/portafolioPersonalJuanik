@@ -9,14 +9,35 @@ export const LandingPageNavigation = () => {
         <nav className={"landingPage-navigation-container"}>
             <img src={logoJI} alt="logo" />
             <ul>
-                <li>Home</li>
-                <li>About Me</li>
-                <li>Services</li>
-                <li>Projects</li>
-                <li>Portfolio</li>
+                <li onClick={() => {
+                    const section = document.getElementById("headerSection");
+                    section?.scrollIntoView({ behavior: "smooth" });
+                }}>Home</li>
+                <li onClick={() => {
+                    const section = document.getElementById("servicesSection");
+                    section?.scrollIntoView({ behavior: "smooth" });
+                }}>Services</li>
+                <li onClick={() => {
+                    const section = document.getElementById("aboutMeSection");
+                    section?.scrollIntoView({ behavior: "smooth" });
+                }}>About Me</li>
+
+                <li onClick={() => {
+                    const section = document.getElementById("projectsSection");
+                    section?.scrollIntoView({ behavior: "smooth" });
+                }}>Projects</li>
             </ul>
-            {/* <button>Contact Me</button> */}
-            <MainButton text="Contact Me" bgColor="#2563EB" textColor="#FFFDFB" hoverBgColor="#FFC857" hoverBorderColor="transparent"  height="80%" actionFunction={() => { console.log("Contact Me clicked") }} />
-        </nav>
+            <MainButton
+                text="Contact Me"
+                bgColor="#2563EB"
+                textColor="#FFFDFB"
+                hoverBgColor="#FFC857"
+                hoverBorderColor="transparent"
+                height="80%"
+                actionFunction={() => {
+                    const section = document.getElementById("contactSection");
+                    section?.scrollIntoView({ behavior: "smooth" });
+                }} />
+        </nav >
     </>
 }

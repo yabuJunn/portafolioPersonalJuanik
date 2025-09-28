@@ -15,7 +15,10 @@ export const LandingHeaderSectionContent = () => {
             <div className={"landingPage-header-content-text-buttons"}>
                 <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} bgColor="#FF6F3C" hoverTextColor="#FFFDFB" actionFunction={() => { console.log("View my portfolio clicked") }} />
 
-                <MainButton text="Hire me" actionFunction={() => { console.log("Hire me clicked") }} />
+                <MainButton text="Hire me" actionFunction={() => {
+                    const section = document.getElementById("contactSection"); // 👈 id del destino
+                    section?.scrollIntoView({ behavior: "smooth" }); // 👈 scroll suave
+                }} />
             </div>
         </div>
 
