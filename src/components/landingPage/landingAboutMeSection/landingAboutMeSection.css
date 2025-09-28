@@ -1,9 +1,11 @@
 #aboutMeSection {
     width: 120%;
-    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
+    padding: 10% 0 10% 0;
 }
 
 .landingPage-aboutMe {
@@ -81,4 +83,15 @@
     font-weight: 400;
     line-height: normal;
     width: 85%;
+}
+
+.landingPage-aboutMe-video {
+    width: 65%;
+    aspect-ratio: 16 / 9;
+    /* Mantiene relación 16:9 automática */
+    border-radius: 1rem;
+    /* opcional: bordes redondeados */
+    display: block;
+    margin: 2rem auto 0 auto;
+    /* centra el video y añade espacio arriba */
 }

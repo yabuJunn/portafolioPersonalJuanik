@@ -20,6 +20,18 @@ export const LandingAboutMeSection = () => {
                 <p>I’m a multidisciplinary creator with a background in Interactive Media Design and Music, passionate about blending art, technology, and sound to craft meaningful digital experiences. My work spans UX/UI design, interactive prototyping, audiovisual production, and music composition, always focused on creating immersive and engaging solutions. With experience in both academic and creative projects, I bring together technical expertise and artistic vision to design interactive spaces, digital products, and sonic identities that inspire and connect people.</p>
                 <img src={aboutMeGraphicStrips} alt={aboutMeGraphicStrips} />
             </div>
+
+            <iframe
+                className="landingPage-aboutMe-video"
+                src="https://www.youtube.com/embed/ew9it84yxzU?si=3dJ8Yej9Usnduy3k"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+            ></iframe>
+
+
         </section>
     </>
 }
