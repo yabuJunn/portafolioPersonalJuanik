@@ -62,7 +62,7 @@
    (<= 1024px)
    ========================= */
 @media (max-width: 1024px) {
-    .landingPage .landingPage-container {
+    .landingPage-container {
         width: 92%;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;

@@ -54,9 +54,19 @@ body::-webkit-scrollbar {
   width: 100%;
   padding: var(--page-padding-desktop);
   min-height: 100vh;
-  max-width: none;
-  /* para que ocupe todo el ancho */
+  box-sizing: border-box;
+  /* NO max-width aquí */
 }
+
+.page-inner {
+  width: 92%;
+  max-width: 1200px;
+  /* o variable --max-inner */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
 
 /* Tipografía por defecto (desktop) */
 h1 {
@@ -109,14 +119,16 @@ iframe {
     --page-padding-desktop: 1rem;
   }
 
-  /* Hacer el contenido más estrecho en móviles si quieres (ej: 84% centrado) */
   .page {
-    width: 84%;
-    margin: 0 auto;
-    /* centra horizontalmente */
     padding: var(--page-padding-mobile);
-    box-sizing: border-box;
-    max-width: 760px;
+    align-items: stretch;
+    /* que los hijos ocupen el ancho del contenedor interior */
+  }
+
+  /* Si quieres que el inner sea más estrecho en móvil */
+  .page-inner {
+    width: 96%;
+    padding: 0 1rem;
   }
 
   /* Tipografía más pequeña para móviles */
@@ -156,7 +168,7 @@ iframe {
    ========================= */
 @media (max-width: 480px) {
   .page {
-    width: 92%;
+    width: 100%;
     padding: 0.75rem;
   }
 
