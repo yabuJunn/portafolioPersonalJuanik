@@ -34,6 +34,15 @@
                 }
             },
             "learnMoreText": "Más información"
+        },
+        "about": {
+            "sectionTitle": "Sobre mí",
+            "subtitle": "Sobre mí",
+            "title": "¿Quién es <span>{name}</span>?",
+            "paragraph": "Soy un creador multidisciplinario con formación en Diseño de Medios Interactivos y Música, apasionado por combinar arte, tecnología y sonido para diseñar experiencias digitales significativas. Mi trabajo abarca diseño UX/UI, prototipado interactivo, producción audiovisual y composición musical, siempre enfocado en soluciones inmersivas y atractivas. Con experiencia en proyectos académicos y creativos, fusiono conocimiento técnico y visión artística para diseñar espacios interactivos, productos digitales e identidades sonoras que inspiran y conectan a las personas.",
+            "videoTitle": "Video de presentación de Juanik",
+            "imageAlt": "Retrato de Juanik",
+            "graphicAlt": "Gráfico decorativo"
         }
     }
 }
