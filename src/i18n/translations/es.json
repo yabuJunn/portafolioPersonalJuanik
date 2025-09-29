@@ -1,5 +1,13 @@
 {
     "landingPage": {
+        "nav": {
+            "home": "Inicio",
+            "services": "Servicios",
+            "aboutMe": "Acerca de mí",
+            "projects": "Proyectos",
+            "navContactMeButton": "Contáctame",
+            "closeButton": "Cerrar"
+        },
         "header": {
             "title": "Hola soy <span>{name}</span>,<br/> Diseñador de Medios Interactivos y Productor Musical",
             "subtitle": "Soy Diseñador de Medios Interactivos y Músico, enfocado en crear experiencias inmersivas que mezclan arte, tecnología y sonido. Combino UX/UI, programación creativa y producción musical para desarrollar proyectos innovadores que inspiran y generan impacto real.",

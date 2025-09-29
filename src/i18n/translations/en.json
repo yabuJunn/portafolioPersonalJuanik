@@ -1,5 +1,13 @@
 {
     "landingPage": {
+        "nav": {
+            "home": "Home",
+            "services": "Services",
+            "aboutMe": "About Me",
+            "projects": "Projects",
+            "navContactMeButton": "Cotact Me",
+            "closeButton": "Close"
+        },
         "header": {
             "title": "Hello I’m <span>{name}</span>,<br/> Interactive Media Designer & Music Producer",
             "subtitle": "I’m an Interactive Media Designer and Musician, focused on creating immersive user experiences that merge art, technology, and sound. I combine UX/UI design, creative coding, and music production to develop innovative projects that inspire and generate real impact.",

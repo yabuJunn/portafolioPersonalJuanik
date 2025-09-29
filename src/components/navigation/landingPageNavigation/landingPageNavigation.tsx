@@ -3,9 +3,13 @@ import "./landingPageNavigation.css";
 
 import { MainButton } from "../../buttons/mainButton/mainButton";
 import { LanguageSwitcher } from "../../language/languageSwitcher/languageSwitcher";
+import { useI18n } from "../../../i18n";
+
 import logoJI from "../../../assets/svg/logoJI.svg";
 
 export const LandingPageNavigation = () => {
+  const { t } = useI18n()
+
   const [open, setOpen] = useState(false);
 
   // lock body scroll when menu open
@@ -28,6 +32,7 @@ export const LandingPageNavigation = () => {
   };
 
   return (
+
     <>
       <nav className={"landingPage-navigation-container"} aria-label="Main Navigation">
         <img
@@ -43,16 +48,16 @@ export const LandingPageNavigation = () => {
 
         {/* desktop / tablet menu */}
         <ul className="nav-list">
-          <li onClick={() => scrollTo("headerSection")}>Home</li>
-          <li onClick={() => scrollTo("servicesSection")}>Services</li>
-          <li onClick={() => scrollTo("aboutMeSection")}>About Me</li>
-          <li onClick={() => scrollTo("projectsSection")}>Projects</li>
+          <li onClick={() => scrollTo("headerSection")}>{t("landingPage.nav.home")}</li>
+          <li onClick={() => scrollTo("servicesSection")}>{t("landingPage.nav.services")}</li>
+          <li onClick={() => scrollTo("aboutMeSection")}>{t("landingPage.nav.aboutMe")}</li>
+          <li onClick={() => scrollTo("projectsSection")}>{t("landingPage.nav.projects")}</li>
         </ul>
 
         {/* contact button (desktop visible, mobile moved into overlay) */}
         <div className="nav-actions">
           <MainButton
-            text="Contact Me"
+            text={t("landingPage.nav.navContactMeButton")}
             bgColor="#2563EB"
             textColor="#FFFDFB"
             hoverBgColor="#FFC857"
@@ -80,15 +85,15 @@ export const LandingPageNavigation = () => {
         <div className="nav-overlay-inner">
           <img src={logoJI} alt="logo" className="overlay-logo" onClick={() => scrollTo("headerSection")} />
           <ul className="overlay-list">
-            <li onClick={() => scrollTo("headerSection")}>Home</li>
-            <li onClick={() => scrollTo("servicesSection")}>Services</li>
-            <li onClick={() => scrollTo("aboutMeSection")}>About Me</li>
-            <li onClick={() => scrollTo("projectsSection")}>Projects</li>
+            <li onClick={() => scrollTo("headerSection")}>{t("landingPage.nav.home")}</li>
+            <li onClick={() => scrollTo("servicesSection")}>{t("landingPage.nav.services")}</li>
+            <li onClick={() => scrollTo("aboutMeSection")}>{t("landingPage.nav.aboutMe")}</li>
+            <li onClick={() => scrollTo("projectsSection")}>{t("landingPage.nav.projects")}</li>
           </ul>
 
           <div className="overlay-cta">
             <MainButton
-              text="Contact Me"
+              text={t("landingPage.nav.navContactMeButton")}
               bgColor="#2563EB"
               textColor="#FFFDFB"
               hoverBgColor="#FFC857"
@@ -99,7 +104,7 @@ export const LandingPageNavigation = () => {
           </div>
 
           <button className="overlay-close" aria-label="Close menu" onClick={() => setOpen(false)}>
-            Close
+            {t("landingPage.nav.closeButton")}
           </button>
         </div>
       </div>
