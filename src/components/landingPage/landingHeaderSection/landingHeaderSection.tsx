@@ -22,7 +22,7 @@ export const LandingHeaderSectionContent = () => {
             </div>
         </div>
 
-        <div class={"landingPage-header-content-image"}>
+        <div className={"landingPage-header-content-image"}>
             <img src={landingPageHeaderImage} alt="Landing Page Header Juanik Photo" />
         </div>
     </>

@@ -1,63 +1,165 @@
+/* landingHeaderSection.css
+   Desktop: grid two-column, tablet/mobile: stacked column
+*/
+
+/* Base (desktop) - grid layout for precise control */
 #headerSection {
-    margin-top: 14vh;
+  margin-top: 10vh; /* reducido para que no quede tan abajo */
+  box-sizing: border-box;
+  padding: 1.25rem 0;
 }
 
+.landingPage-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* text | image */
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Text column */
 .landingPage-header-content-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 51%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 1rem;
+  text-align: left;
 }
 
 .landingPage-header-content-text h1 {
-    color: var(--Dark, #1E293B);
-    font-family: Sora;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
+  color: var(--Dark, #1E293B);
+  font-family: Sora, system-ui, sans-serif;
+  font-size: 3.4rem; /* un poco más grande para desktop */
+  font-weight: 600;  /* más presencia */
+  line-height: 1.02;
+  margin: 0;
+  letter-spacing: -0.02em;
 }
 
 .landingPage-header-content-text h1 span {
-    color: #2563EB;
-    font-family: Sora;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
+  color: #2563EB;
+  font-weight: 800;
 }
 
 .landingPage-header-content-text p {
-    color: var(--Dark, #1E293B);
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: var(--Dark, #1E293B);
+  font-family: Sora, system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 58ch; /* legibilidad */
 }
 
+/* buttons row */
 .landingPage-header-content-text-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    gap: 1.5rem;
-    width: 100%;
-    height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
 }
 
+/* Image column */
 .landingPage-header-content-image {
-    width: 40%;
-    display: flex;
-    flex-direction: row-reverse;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 1rem;
 }
 
 .landingPage-header-content-image img {
-    width: 100%;
-    transform: translate(0, 13.5%);
-    z-index: 2;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  transform: translateY(8%); /* sutil desplazamiento en desktop */
+  transition: transform 280ms ease;
+  z-index: 2;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* =========================
+   Tablet <= 1024px
+   stacked layout, center text
+   ========================= */
+@media (max-width: 1024px) {
+  #headerSection { margin-top: 7.5vh; padding: 1rem 0; }
+
+  .landingPage-header {
+    grid-template-columns: 1fr; /* single column */
+    gap: 1.25rem;
+  }
+
+  .landingPage-header-content-text {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .landingPage-header-content-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  .landingPage-header-content-text p {
+    font-size: 1rem;
+    max-width: 60ch;
+    padding: 0 0.75rem;
+  }
+
+  .landingPage-header-content-image img {
+    max-width: 460px;
+    transform: translateY(4%); /* aún sutil */
+  }
+}
+
+/* =========================
+   Mobile <= 480px
+   compact, stacked, readable
+   ========================= */
+@media (max-width: 480px) {
+  #headerSection { margin-top: 5.5vh; padding: 0.6rem 0; }
+
+  .landingPage-header-content-text h1 {
+    font-size: 1.6rem;
+    line-height: 1.05;
+    font-weight: 700;
+  }
+
+  .landingPage-header-content-text h1 span { font-size: 1.6rem; }
+
+  .landingPage-header-content-text p {
+    font-size: 0.95rem;
+    max-width: 44ch;
+    padding: 0 0.4rem;
+  }
+
+  .landingPage-header-content-text-buttons {
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .landingPage-header-content-image {
+    margin-top: 0.25rem;
+    padding: 0;
+  }
+
+  .landingPage-header-content-image img {
+    max-width: 320px;
+    transform: none; /* sin desplazamiento en móviles para mayor estabilidad visual */
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .landingPage-header-content-image img { transition: none !important; transform: none !important; }
 }

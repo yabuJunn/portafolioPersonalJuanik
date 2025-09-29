@@ -1,34 +1,124 @@
+/* landingSectionDivider.css — versión corregida: full-width diagonals sin scroll */
+
+/* contenedor relativo que controla la altura y evita overflow horizontal */
 .landingPage-sectionDivider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     width: 100%;
+    height: 10vh;
+    /* altura total visible del divider (ajustable) */
+    min-height: 60px;
+    box-sizing: border-box;
+    pointer-events: none;
+    /* solo decorativo */
 }
 
-.landingPage-sectionDivider .landingPage-sectionDivider-line {
-    width: 100vw;
-    height: 10vh;
-    background: var(--Light, #FFFDFB);
+/* Todas las capas se posicionan absolute y se centran con left:50% translateX(-50%).
+   Usamos un width amplio en vw para que, al rotar, cubran más que el viewport
+   y nunca dejen huecos (y evitamos usar 100vw directo para no generar scroll). */
+
+/* capa inferior (más rotada, por debajo) */
+.landingPage-sectionDivider-lineTransform2 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform-origin: center top;
+    transform: translateX(-50%) rotate(-6deg);
+    width: 220vw;
+    /* muy ancho para cubrir diagonales */
+    height: 100%;
+    background: var(--Main-2-alt, #F472B6);
     z-index: 10;
 }
 
-.landingPage-sectionDivider .landingPage-sectionDivider-lineTransform {
-    width: 150vw;
-    height: 10vh;
+/* capa del medio (rotación moderada) */
+.landingPage-sectionDivider-lineTransform {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform-origin: center top;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 210vw;
+    height: 100%;
     background: var(--Main-2, #FF6F3C);
-    transform: rotate(-2deg);
-    position: relative;
-    top: -10vh;
-    z-index: 9;
+    z-index: 20;
 }
 
-.landingPage-sectionDivider .landingPage-sectionDivider-lineTransform2 {
-    width: 150vw;
-    height: 10vh;
-    background: var(--Main-2, #F472B6);
-    transform: rotate(-4deg);
-    position: relative;
-    top: -20vh;
-    z-index: 8;
+/* capa superior (la "franja" principal, sin rotación o muy leve) */
+.landingPage-sectionDivider-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform-origin: center top;
+    transform: translateX(-50%) rotate(0deg);
+    width: 200vw;
+    height: 100%;
+    background: var(--Light, #FFFDFB);
+    z-index: 30;
+}
+
+/* Opcional: si quieres un borde redondeado en las capas para suavizar */
+.landingPage-sectionDivider-line,
+.landingPage-sectionDivider-lineTransform,
+.landingPage-sectionDivider-lineTransform2 {
+    border-radius: 0;
+}
+
+/* =========================
+   Responsive adjustments
+   ========================= */
+
+/* Tablet: reducir alturas y anchuras para que no ocupen tanto */
+@media (max-width: 1024px) {
+    .landingPage-sectionDivider {
+        height: 8vh;
+        min-height: 48px;
+    }
+
+    .landingPage-sectionDivider-lineTransform2 {
+        width: 200vw;
+        transform: translateX(-50%) rotate(-4.5deg);
+    }
+
+    .landingPage-sectionDivider-lineTransform {
+        width: 190vw;
+        transform: translateX(-50%) rotate(-2.5deg);
+    }
+
+    .landingPage-sectionDivider-line {
+        width: 170vw;
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+
+/* Mobile: reducir rotaciones y anchuras para evitar que la diagonal "coma" la pantalla */
+@media (max-width: 480px) {
+    .landingPage-sectionDivider {
+        height: 7vh;
+        min-height: 44px;
+    }
+
+    .landingPage-sectionDivider-lineTransform2 {
+        width: 160vw;
+        transform: translateX(-50%) rotate(-2.5deg);
+    }
+
+    .landingPage-sectionDivider-lineTransform {
+        width: 150vw;
+        transform: translateX(-50%) rotate(-1.6deg);
+    }
+
+    .landingPage-sectionDivider-line {
+        width: 140vw;
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .landingPage-sectionDivider-line,
+    .landingPage-sectionDivider-lineTransform,
+    .landingPage-sectionDivider-lineTransform2 {
+        transition: none !important;
+    }
 }

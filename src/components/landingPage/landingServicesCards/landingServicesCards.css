@@ -1,63 +1,165 @@
-.landingPage-services-content-cards-container {
+/* landingServicesCards.css - mobile-first responsive card */
+
+/* Card wrapper */
+.landing-services-card {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
-    gap: 3%;
-    padding: 1.5%;
-    border-radius: 2%;
-
+    gap: 0.85rem;
+    padding: 1rem;
+    border-radius: 12px;
     background-color: #FFFDFB;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+    transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.landingPage-services-content-cards-container-icon {
-    width: 20%;
-    aspect-ratio: 1 / 1;
-    background-color: #F472B6;
-    border-radius: 100%;
+/* Hover / focus elevated effect (desktop) */
+.landing-services-card:hover,
+.landing-services-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(16, 24, 40, 0.08);
+}
+
+/* Top row: icon + title */
+.landing-services-card-top {
     display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+/* Icon circle */
+.landing-services-card-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
+    background-color: var(--Accent, #F472B6);
+    box-sizing: border-box;
+    flex: 0 0 auto;
 }
 
-.landingPage-services-content-cards-container-icon img {
-    width: 85%;
+/* Icon image fits inside */
+.landing-services-card-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    display: block;
 }
 
-.landingPage-services-content-cards-container h4 {
+/* Title */
+.landing-services-card-title {
+    margin: 0;
     color: var(--Main-3, #2563EB);
-    font-family: Sora;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-family: Sora, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+    line-height: 1.15;
+    flex: 1 1 auto;
 }
 
-.landingPage-services-content-cards-container p {
+/* Description */
+.landing-services-card-desc {
+    margin: 0;
     color: var(--Dark, #1E293B);
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
+    font-family: Sora, system-ui, sans-serif;
+    font-size: clamp(0.95rem, 2.2vw, 1rem);
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.5;
+    opacity: 0.95;
 }
 
-.landingPage-services-content-cards-container-learn-more {
-    display: flex;
+/* CTA (learn more) — styled as button-like link */
+.landing-services-card-cta {
+    display: inline-flex;
     align-items: center;
-    gap: 1%;
+    gap: 0.5rem;
+    margin-top: auto;
+    /* push CTA to bottom when card stretches */
     cursor: pointer;
-    height: 10%;
-}
-
-.landingPage-services-content-cards-container-learn-more p {
-    font-size: 0.90rem;
-    transition: all 0.3s;
-}
-
-.landingPage-services-content-cards-container-learn-more p:hover {
-    font-size: 0.90rem;
     color: #2563EB;
+    font-weight: 700;
+    user-select: none;
+    padding: 0.4rem 0.5rem;
+    border-radius: 8px;
+    width: fit-content;
+    transition: color 180ms ease, transform 120ms ease, background-color 180ms ease;
+}
+
+.landing-services-card-cta img {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+/* CTA hover/focus feedback */
+.landing-services-card-cta:hover,
+.landing-services-card-cta:focus {
+    transform: translateY(-2px);
+    color: #1746A2;
+    outline: none;
+}
+
+/* Accessibility: focus style for CTA */
+.landing-services-card-cta:focus {
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+/* ===== Responsive behaviors ===== */
+
+/* Tablet: slightly bigger icon and spacing, two-column layouts handled by parent grid */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .landing-services-card {
+        padding: 1.15rem;
+        border-radius: 14px;
+    }
+
+    .landing-services-card-icon {
+        width: 64px;
+        height: 64px;
+        min-width: 64px;
+    }
+
+    .landing-services-card-title {
+        font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+    }
+}
+
+/* Desktop: ensure cards stretch equally when in grid parent */
+@media (min-width: 1025px) {
+    .landing-services-card {
+        padding: 1.25rem;
+        border-radius: 14px;
+        min-height: 220px;
+        /* approximate balanced height; adjust as desired */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .landing-services-card-icon {
+        width: 72px;
+        height: 72px;
+        min-width: 72px;
+    }
+
+    .landing-services-card-title {
+        font-size: 1.4rem;
+    }
+
+    .landing-services-card-desc {
+        font-size: 1rem;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .landing-services-card,
+    .landing-services-card-cta {
+        transition: none;
+    }
 }

@@ -12,14 +12,14 @@ export const MainFooter = () => {
             <p className={"main-footer-head-title"}>“Blending art, design & technology to craft immersive experiences.”</p>
             <hr />
             <div className={"main-footer-content-container"}>
-                <img src={JuanikInteractiveLogoWhite} alt={JuanikInteractiveLogoWhite} className={"main-footer-logo"} />
+                <img src={JuanikInteractiveLogoWhite} alt="Juanik Interactive logo" className="main-footer-logo" />
                 <div className={"main-footer-content-container-info-container"}>
                     <h5>Follow me</h5>
                     <div className={"main-footer-info-socials-container"}>
-                        <a href="https://www.instagram.com/juanda_reybs/"><img src={instagramIconWhite} alt="Instagram" /></a>
-                        <a href="https://www.linkedin.com/in/juan-david-reyes-barrios-0a0574296/"><img src={linkedinIconWhite} alt="LinkedIn" /></a>
-                        <a href="https://www.behance.net/juandareyesb"><img src={behanceIconWhite} alt="Behance" /></a>
-                        <a href="https://github.com/yabuJunn"><img src={githubIconWhite} alt="GitHub" /></a>
+                        <a href="https://www.instagram.com/juanda_reybs/" target="_blank" rel="noopener noreferrer"><img src={instagramIconWhite} alt="Instagram" /></a>
+                        <a href="https://www.linkedin.com/in/juan-david-reyes-barrios-0a0574296/" target="_blank" rel="noopener noreferrer"><img src={linkedinIconWhite} alt="LinkedIn" /></a>
+                        <a href="https://www.behance.net/juandareyesb" target="_blank" rel="noopener noreferrer"><img src={behanceIconWhite} alt="Behance" /></a>
+                        <a href="https://github.com/yabuJunn" target="_blank" rel="noopener noreferrer"><img src={githubIconWhite} alt="GitHub" /></a>
                     </div>
                 </div>
 

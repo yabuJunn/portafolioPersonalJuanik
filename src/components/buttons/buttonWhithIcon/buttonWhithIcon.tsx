@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import "./buttonWhithIcon.css";
 
 type ButtonWithIconProps = {
@@ -13,7 +12,8 @@ type ButtonWithIconProps = {
     hoverTextColor?: string;        // color de texto al hover
     hoverTextBgColor?: string;      // color de contenedor de texto al hover
     hoverCircleBgColor?: string;    // color del círculo derecho al hover
-    actionFunction: () => void; // función de acción al hacer click
+    ariaLabel?: string;
+    actionFunction?: () => void; // función de acción al hacer click
 };
 
 export const ButtonWithIcon = ({
@@ -27,35 +27,49 @@ export const ButtonWithIcon = ({
     hoverTextColor = "#FFD700",
     hoverTextBgColor = "#1746A2",
     hoverCircleBgColor = "#F5F5F5",
-    actionFunction = () => { console.log("Button with icon clicked") }
+    ariaLabel,
+    actionFunction = () => {
+        console.log("Button with icon clicked");
+    },
 }: ButtonWithIconProps) => {
     const [isHovered, setIsHovered] = useState(false);
 
+    const handleKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            actionFunction();
+        }
+    };
+
     return (
-        <button onClick={() => { actionFunction() }}
+        <button
+            type="button"
             className="buttonWithIconContainer"
-            style={{
-                backgroundColor: isHovered ? hoverBgColor : bgColor,
-                transition: "all 0.3s ease",
-            }}
+            aria-label={ariaLabel ?? text}
+            onClick={() => actionFunction()}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={() => setIsHovered(true)}
+            onTouchEnd={() => setIsHovered(false)}
+            onKeyDown={handleKey}
+            style={{
+                backgroundColor: isHovered ? hoverBgColor : bgColor,
+            }}
         >
             <div
                 className="buttonWithIconText"
                 style={{
                     backgroundColor: isHovered ? hoverTextBgColor : textBgColor,
                     color: isHovered ? hoverTextColor : textColor,
-                    transition: "all 0.3s ease",
                 }}
             >
                 {text}
             </div>
+
             <div
                 className="buttonWithIconImageContainer"
                 style={{
                     backgroundColor: isHovered ? hoverCircleBgColor : circleBgColor,
-                    transition: "all 0.3s ease",
                 }}
             >
                 <img src={icon} alt={text} className="buttonWithIconImage" />

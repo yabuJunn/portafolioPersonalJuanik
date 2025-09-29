@@ -1,14 +1,89 @@
+/* mainButton.css - mobile-first, accessible, long transition */
+
+:root {
+  --main-transition-duration: 0.5s;
+  --main-radius: 5rem;
+  --main-font: Sora, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Base (mobile) */
 .mainButton {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.6rem 1.5rem;
-  /* height: 100%; */
-  border-radius: 5rem;
-  font-family: Sora, sans-serif;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--main-radius);
+  font-family: var(--main-font);
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
-  transition: all 3s ease; /* transición larga como pediste */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--main-transition-duration) ease,
+              color var(--main-transition-duration) ease,
+              border-color var(--main-transition-duration) ease,
+              transform 160ms ease;
+  box-sizing: border-box;
+
+  /* sensible touch target if no explicit height is provided */
+  min-height: 44px;
+  line-height: 1;
+}
+
+/* Visual pressed state (quick) */
+.mainButton:active {
+  transform: translateY(1px);
+}
+
+/* Focus (keyboard) */
+.mainButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  border-radius: 999px;
+}
+
+/* If a parent sets height (like 100%), let the inner content be centered vertically */
+.mainButton[style*="height"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablet adjustments */
+@media (min-width: 601px) {
+  .mainButton {
+    padding: 0.65rem 1.5rem;
+    font-size: 1rem;
+    min-height: 48px;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1025px) {
+  .mainButton {
+    padding: 0.7rem 1.75rem;
+    font-size: 1rem;
+    min-height: 48px;
+  }
+}
+
+/* Utility: small variant */
+.mainButton.small {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.875rem;
+  min-height: 36px;
+}
+
+/* Utility: full width */
+.mainButton.fullWidth {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .mainButton {
+    transition: none;
+  }
 }

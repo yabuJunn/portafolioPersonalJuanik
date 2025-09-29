@@ -1,11 +1,18 @@
+/* =========================
+   landingPage.css
+   Desktop-first (default)
+   ========================= */
+
 .landingPage {
     background-color: #FFC857;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    padding-bottom: 0;
 }
 
+/* Container: en desktop deja 85% como tenías */
 .landingPage .landingPage-container {
     display: flex;
     flex-direction: column;
@@ -13,13 +20,21 @@
     justify-content: center;
     height: 100%;
     width: 85%;
+    max-width: 1600px;
+    box-sizing: border-box;
+    padding-top: 2rem;
 }
 
+/* Cada sección */
 .landingPage .landingPage-section {
     width: 100%;
     min-height: 80vh;
+    /* desktop: secciones grandes */
+    box-sizing: border-box;
+    padding: 3rem 0;
 }
 
+/* Header: desktop row layout */
 .landingPage .landingPage-header {
     display: flex;
     flex-direction: row;
@@ -27,4 +42,112 @@
     justify-content: space-between;
     gap: 1.5rem;
     width: 100%;
+    box-sizing: border-box;
+}
+
+/* Si tu header tiene columna de texto e imagen, asegúrate de que se ajusten */
+.landingPage .landingPage-header>* {
+    box-sizing: border-box;
+}
+
+/* Ajustes sutiles para que el header no sea gigantesco en pantallas extra anchas */
+@media (min-width: 1600px) {
+    .landingPage .landingPage-section {
+        padding: 4rem 0;
+    }
+}
+
+/* =========================
+   Tablet / small screens
+   (<= 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+    .landingPage .landingPage-container {
+        width: 92%;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Reduce min-height de secciones para que no llenen la pantalla */
+    .landingPage .landingPage-section {
+        min-height: 60vh;
+        padding: 2rem 0;
+    }
+
+    /* Header: apilar (column) */
+    .landingPage .landingPage-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        /* centra textos */
+        padding: 1rem 0;
+    }
+
+    /* Si tienes una imagen grande a la derecha, limitar su tamaño */
+    .landingPage .landingPage-header .landingPage-header-content-image,
+    .landingPage .landingPage-header .landingPage-header-content-image img {
+        width: 80%;
+        max-width: 420px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* Espaciado para secciones */
+    .landingPage .landingPage-section+.landingPage-section {
+        margin-top: 1.25rem;
+    }
+}
+
+/* =========================
+   Mobile / small phones
+   (<= 480px)
+   ========================= */
+@media (max-width: 480px) {
+    .landingPage .landingPage-container {
+        width: 96%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .landingPage .landingPage-section {
+        min-height: auto;
+        /* deja que el contenido determine la altura */
+        padding: 1.25rem 0;
+    }
+
+    .landingPage .landingPage-header {
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+    }
+
+    /* Reduce tipografía si lo manejas aquí (opcional) */
+    .landingPage .landingPage-header h1 {
+        font-size: 1.6rem;
+        line-height: 1.1;
+    }
+
+    /* Ajusta el espacio entre secciones para móviles */
+    .landingPage .landingPage-section+.landingPage-section {
+        margin-top: 0.8rem;
+    }
+}
+
+/* =========================
+   Utilities (no romper layout)
+   ========================= */
+
+/* Make sure images and iframes inside sections are responsive */
+.landingPage img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Ensure content inside sections doesn't overflow horizontally */
+.landingPage .landingPage-section * {
+    max-width: 100%;
+    box-sizing: border-box;
 }

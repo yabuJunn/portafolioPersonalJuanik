@@ -1,17 +1,37 @@
+/* landingTitleText.css */
+
+/* Base: mobile-first */
 .landingTitleText {
-    color: var(--Dark, #1E293B);
-    font-family: Sora;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: var(--Dark, #1E293B);
+  font-family: Sora, system-ui, sans-serif;
+  font-size: clamp(1.5rem, 5vw, 3rem); /* fluye entre 1.5rem en móviles y 3rem en desktop */
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
 }
 
 .landingTitleText span {
-    color: var(--Main-3, #2563EB);
-    font-family: Sora;
+  color: var(--Main-3, #2563EB);
+  font-family: inherit;
+  font-size: inherit; /* hereda del padre */
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* Tablet (≥601px): aumenta ligeramente la legibilidad */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .landingTitleText {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    text-align: center; /* opcional: centra títulos en tablet */
+  }
+}
+
+/* Desktop (≥1025px): tamaño grande y bien espaciado */
+@media (min-width: 1025px) {
+  .landingTitleText {
     font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    line-height: 1.3;
+    text-align: left;
+  }
 }

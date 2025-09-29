@@ -1,91 +1,223 @@
+/* landingContactSection.css - mobile-first, full-width background + centered inner content */
+
+/* SECTION: background spans full viewport width */
 #contactSection {
-    width: 120%;
-    height: 100vh;
+    width: 125%;
+    box-sizing: border-box;
+    background-color: #2563EB;
+    padding: 2.25rem 0;
+    color: var(--Light, #FFFDFB);
+}
+
+/* INNER: center and constrain content (keeps background full-width) */
+.landingPage-contact-inner {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+/* COLUMN LAYOUT (mobile = stacked) */
+.landingPage-contact-content-text-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* IMAGE COLUMN (mobile: image below or right; we place it after content in DOM) */
+.landingPage-contact-content-image-column {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2563EB;
+    box-sizing: border-box;
 }
 
-.landingPage-contact-content-text-container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2%;
-    margin-left: 6%;
-}
-
-
+/* TEXT STYLES */
 .landingPage-contact-content-title {
     color: var(--Light, #FFFDFB);
-    font-family: Sora;
-    font-size: 3rem;
-    font-style: normal;
+    font-family: Sora, system-ui, sans-serif;
+    font-size: clamp(1.6rem, 4.8vw, 2.4rem);
     font-weight: 700;
-    line-height: normal;
+    margin: 0;
 }
 
 .landingPage-contact-content-subtitle {
     color: var(--Main-1, #FFC857);
-    font-family: Sora;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-family: Sora, system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 .landingPage-contact-content-description {
     color: var(--Light, #FFFDFB);
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-family: Sora, system-ui, sans-serif;
+    font-size: clamp(0.95rem, 3vw, 1rem);
+    line-height: 1.5;
+    max-width: 72ch;
+    margin: 0;
 }
 
 .landingPage-contact-content-description span {
     font-weight: 700;
 }
 
-.landingPage-contact-content-inputs-container {
+/* FORM layout */
+.landingPage-contact-form {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 2%;
-    margin-top: 2%;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.9rem;
+    box-sizing: border-box;
 }
 
-.landingPage-contact-content-image-container {
-    width: 40%;
-    height: 100%;
+/* When .form-row wrapper exists (we used it), make responsive columns */
+.form-row {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    flex-direction: column;
+    /* mobile: stacked */
 }
 
+/* each column inside .form-row */
+.form-row .form-col {
+    flex: 1 1 100%;
+}
+
+/* actions (button + status) */
+.landingPage-contact-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 0.25rem;
+    flex-wrap: wrap;
+}
+
+/* status text */
+.text-status {
+    font-family: Sora, system-ui, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.text-status.ok {
+    color: #10B981;
+}
+
+.text-status.err {
+    color: #EF4444;
+}
+
+/* IMAGE styles */
 .landingPage-contact-content-image {
-    height: 80%;
-    aspect-ratio: 1 / 1.3;
-    background-color: #10B981;
+    width: 72%;
+    max-width: 420px;
+    border-radius: 8px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    overflow: hidden;
-    margin-left: 16%;
-    border-radius: 2%;
+    background: #10B981;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
 }
 
 .landingPage-contact-content-image img {
-    height: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
-.text-status {
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+/* =========================
+   TABLET: 2-column top row (form/text) and image as aside on the right?
+   Keep image as right column and text/form left.
+   ========================= */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .landingPage-contact-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .landingPage-contact-content-text-column {
+        grid-column: 1 / 2;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .landingPage-contact-content-image-column {
+        grid-column: 2 / 3;
+        justify-self: center;
+    }
+
+    .form-row {
+        flex-direction: row;
+    }
+}
+
+/* =========================
+   DESKTOP: two columns: left = text + form, right = image
+   ========================= */
+@media (min-width: 1025px) {
+    .landingPage-contact-inner {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        /* left wider than image column */
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .landingPage-contact-content-text-column {
+        grid-column: 1 / 2;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .landingPage-contact-content-image-column {
+        grid-column: 2 / 3;
+        justify-self: end;
+    }
+
+    .form-row {
+        flex-direction: row;
+    }
+
+    .landingPage-contact-content-image {
+        width: 80%;
+        max-width: 520px;
+        border-radius: 8px;
+    }
+}
+
+/* small phones tweak */
+@media (max-width: 420px) {
+    .landingPage-contact-content-image {
+        width: 88%;
+        max-width: 320px;
+    }
+
+    .landingPage-contact-content-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .landingPage-contact-content-image,
+    .landingPage-contact-inner {
+        transition: none !important;
+    }
 }

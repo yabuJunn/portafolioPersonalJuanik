@@ -1,85 +1,120 @@
-.landingPage-project-content-card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
-    gap: 3%;
-    padding: 1.5%;
-    border-radius: 2%;
+/* landingProjectCard.css - mobile-first card styles */
 
-    background-color: #FFFDFB;
+.landingPage-project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #FFFDFB;
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  min-height: 0;
 }
 
-.landingPage-project-content-card-image {
-    width: 100%;
-    height: 20vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 2%;
+/* hover / focus lift */
+.landingPage-project-card:hover,
+.landingPage-project-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(16,24,40,0.08);
 }
 
-.landingPage-project-content-card-image img {
-    width: 100%;
+/* image area with fixed aspect ratio */
+.landingPage-project-card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.landingPage-project-content-cards-container-titles {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+.landingPage-project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.landingPage-project-content-cards-container-titles h4 {
-    color: var(--Main-3, #2563EB);
-    font-family: Sora;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+/* titles */
+.landingPage-project-card-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.landingPage-project-content-cards-container-titles p {
-    color: var(--Dark, #2563EB);
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.landingPage-project-card-title {
+  margin: 0;
+  font-family: Sora, system-ui, sans-serif;
+  color: var(--Main-3, #2563EB);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
 }
 
-.landingPage-project-content-card-description {
-    color: var(--Dark, #1E293B);
-    font-family: Sora;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.landingPage-project-card-subtitle {
+  margin: 0;
+  font-family: Sora, system-ui, sans-serif;
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
-.landingPage-project-content-cards-container-learn-more {
-    display: flex;
-    align-items: center;
-    gap: 1%;
-    cursor: pointer;
-    text-decoration: none;
+/* description */
+.landingPage-project-card-description {
+  margin: 0;
+  color: var(--Dark, #1E293B);
+  font-family: Sora, system-ui, sans-serif;
+  font-size: clamp(0.95rem, 2.4vw, 1rem);
+  line-height: 1.45;
+  opacity: 0.95;
 }
 
-.landingPage-project-content-cards-container-learn-more p {
-    font-size: 0.90rem;
-    transition: all 0.3s;
-    color: var(--Dark, #1E293B);
-    font-family: Sora;
-    font-size: 0.90rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+/* CTA */
+.landingPage-project-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  text-decoration: none;
+  color: #2563EB;
+  font-weight: 700;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  width: fit-content;
+  transition: transform 150ms ease, color 150ms ease;
 }
 
-.landingPage-project-content-cards-container-learn-more p:hover {
-    font-size: 0.90rem;
-    color: #2563EB;
+.landingPage-project-card-cta img { width: 14px; height: 14px; }
+
+/* CTA hover/focus */
+.landingPage-project-card-cta:hover,
+.landingPage-project-card-cta:focus {
+  transform: translateY(-2px);
+  color: #1746A2;
+  outline: none;
+}
+
+/* Responsive tweaks */
+@media (min-width: 601px) {
+  .landingPage-project-card {
+    padding: 1.1rem;
+  }
+  .landingPage-project-card-image { border-radius: 10px; }
+}
+
+@media (min-width: 1025px) {
+  .landingPage-project-card {
+    padding: 1.25rem;
+  }
+  .landingPage-project-card-image { aspect-ratio: 16/9; }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .landingPage-project-card,
+  .landingPage-project-card-cta {
+    transition: none;
+  }
 }

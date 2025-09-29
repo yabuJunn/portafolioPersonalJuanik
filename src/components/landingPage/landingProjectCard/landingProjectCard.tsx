@@ -1,33 +1,39 @@
-import "./landingProjectCard.css"
-
-import arrowRigthBlue from "../../../assets/svg/landingPage/arrowRightBlue.svg"
+import "./landingProjectCard.css";
 
 type LandingProjectsCardsProps = {
-    cardTitle: string;
-    cardSubtitle: string;
-    cardDescription: string;
-    cardImage: string;
-    cardProjectLink: string;
-}
+  cardTitle: string;
+  cardSubtitle: string;
+  cardDescription: string;
+  cardImage: string;
+  cardProjectLink: string;
+};
 
 export const LandingProjectCard = ({ cardTitle, cardSubtitle, cardDescription, cardImage, cardProjectLink }: LandingProjectsCardsProps) => {
-    return <>
-        <div className={"landingPage-project-content-card-container"}>
-            <div className={"landingPage-project-content-card-image"}>
-                <img src={cardImage} alt={cardImage} />
-            </div>
+  const id = `proj-${cardTitle.replace(/\s+/g, "-").toLowerCase()}`;
 
-            <div className={"landingPage-project-content-cards-container-titles"}>
-                <h4>{cardTitle}</h4>
-                <p>{cardSubtitle}</p>
-            </div>
+  return (
+    <article className="landingPage-project-card" aria-labelledby={id}>
+      <div className="landingPage-project-card-image" role="img" aria-label={cardTitle}>
+        <img src={cardImage} alt={cardTitle} />
+      </div>
 
-            <p className={"landingPage-project-content-card-description"}>{cardDescription}</p>
+      <div className="landingPage-project-card-titles">
+        <h4 id={id} className="landingPage-project-card-title">{cardTitle}</h4>
+        <p className="landingPage-project-card-subtitle">{cardSubtitle}</p>
+      </div>
 
-            <a href={cardProjectLink} className={"landingPage-project-content-cards-container-learn-more"}>
-                <p>Learn more</p>
-                <img src={arrowRigthBlue} alt={arrowRigthBlue} />
-            </a>
-        </div>
-    </>
-}
+      <p className="landingPage-project-card-description">{cardDescription}</p>
+
+      <a
+        href={cardProjectLink}
+        className="landingPage-project-card-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Learn more about ${cardTitle}`}
+      >
+        <span>Learn more</span>
+        <img src="../../../assets/svg/landingPage/arrowRightBlue.svg" alt="" aria-hidden="true" />
+      </a>
+    </article>
+  );
+};

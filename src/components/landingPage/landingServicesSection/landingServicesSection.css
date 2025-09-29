@@ -1,47 +1,154 @@
+/* landingServicesSection.css - mobile-first */
+
+/* Section base */
 .landingPage-services {
-    /* padding-top: 20vh; */
-    justify-content: center;
-    align-items: center;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.25rem 0;
+    /* separación vertical */
+    background: transparent;
+    /* deja que el parent maneje background */
 }
 
-#servicesSection {
-    margin: 0;
-    padding-bottom: 10vh;
-}
-
+/* header container */
 .landingPage-services-content-text-header-container {
     width: 100%;
-    height: 14vh;
+    max-width: 1200px;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    gap: 10%;
+    gap: 0.9rem;
 }
 
+/* section small title */
 .landingPage-services-content-text-header-title {
     color: var(--Main-3, #2563EB);
-    font-family: Sora;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-family: Sora, system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
 }
 
+/* header row: title + small subtitle + action
+   On mobile we stack items; on desktop they'll be side-by-side */
 .landingPage-services-content-text-header {
     display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
-    height: 8vh;
+    box-sizing: border-box;
 }
 
+/* Wrapper for button (so we can position it in CSS) */
+.services-header-action {
+    display: block;
+}
+
+/* Cards container - mobile: column */
 .landingPage-services-cards-container {
+    margin-top: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
-    gap: 2%;
-    margin-top: 4%;
-    min-height: 45vh;
+    box-sizing: border-box;
+}
+
+/* If your LandingServicesCards has an outer class, make sure they stretch:
+   .landing-services-card { width: 100%; } - do it in its own CSS.
+*/
+
+/* ======================
+   Tablet: (min-width:601px)
+   two columns for heading and small grid for cards (2 columns)
+   ====================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .landingPage-services-content-text-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .services-header-action {
+        display: block;
+        width: auto;
+    }
+
+    /* cards: 2 columns on tablet */
+    .landingPage-services-cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.25rem;
+        align-items: start;
+    }
+}
+
+/* ======================
+   Desktop: (min-width:1025px)
+   heading row stays, cards become 3 columns
+   ====================== */
+@media (min-width: 1025px) {
+    .landingPage-services {
+        margin-top: 3rem;
+    }
+
+    .landingPage-services-content-text-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.25rem;
+    }
+
+    .landingPage-services-content-text-header-title {
+        font-size: 2rem;
+    }
+
+    .landingPage-services-cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        align-items: stretch;
+    }
+}
+
+/* ======================
+   Small tweaks
+   ====================== */
+
+/* Prevent large images or internals from overflowing the card area */
+.landingPage-services-cards-container img,
+.landingPage-services-cards-container svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* If LandingServicesCards has its own padding/margins, ensure they look right:
+   .landing-services-card { padding: 1rem; box-sizing: border-box; } */
+
+/* Accessibility: focus states for interactive elements */
+.landingPage-services .buttonWithIconContainer:focus,
+.landingPage-services .buttonWithIconContainer:active,
+.landingPage-services .buttonWithIconContainer:hover {
+    transform: translateY(-2px);
+}
+
+/* Ensure there's breathing room at bottom on mobile */
+@media (max-width: 480px) {
+    .landingPage-services {
+        padding: 1.5rem 0;
+    }
+
+    .landingPage-services-content-text-header-title {
+        font-size: 1.1rem;
+    }
 }
