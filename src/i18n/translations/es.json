@@ -105,6 +105,24 @@
                 }
             },
             "imageAlt": "Retrato de Juanik"
+        },
+        "footer": {
+            "headline": "“Fusionando arte, diseño y tecnología para crear experiencias inmersivas.”",
+            "follow": "Sígueme",
+            "contact": {
+                "title": "Contáctame",
+                "email": "Correo:",
+                "phone": "Llama hoy:"
+            },
+            "availability": {
+                "title": "Disponibilidad",
+                "text": "Actualmente disponible para trabajos freelance y colaboraciones - 2025."
+            },
+            "location": {
+                "title": "Ubicación",
+                "text": "Con sede en Cali, Colombia - Disponible en todo el mundo"
+            },
+            "finalNote": "© 2025 Juanik Interactive — Diseñado y programado por mí."
         }
     }
 }

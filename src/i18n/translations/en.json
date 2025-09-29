@@ -105,6 +105,24 @@
                 }
             },
             "imageAlt": "Portrait Juanik"
+        },
+        "footer": {
+            "headline": "“Blending art, design & technology to craft immersive experiences.”",
+            "follow": "Follow me",
+            "contact": {
+                "title": "Contact me",
+                "email": "Email:",
+                "phone": "Call today:"
+            },
+            "availability": {
+                "title": "Availability",
+                "text": "Currently available for freelance & collaborations - 2025."
+            },
+            "location": {
+                "title": "Location",
+                "text": "Based in Cali, Colombia - Available worldwide"
+            },
+            "finalNote": "© 2025 Juanik Interactive — Designed & coded by me."
         }
     }
 }
