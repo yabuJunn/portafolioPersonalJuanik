@@ -1,5 +1,7 @@
 import "./landingProjectCard.css";
 
+import { useI18n } from "../../../i18n";
+
 type LandingProjectsCardsProps = {
   cardTitle: string;
   cardSubtitle: string;
@@ -9,6 +11,8 @@ type LandingProjectsCardsProps = {
 };
 
 export const LandingProjectCard = ({ cardTitle, cardSubtitle, cardDescription, cardImage, cardProjectLink }: LandingProjectsCardsProps) => {
+  const { t } = useI18n();
+
   const id = `proj-${cardTitle.replace(/\s+/g, "-").toLowerCase()}`;
 
   return (
@@ -31,7 +35,7 @@ export const LandingProjectCard = ({ cardTitle, cardSubtitle, cardDescription, c
         rel="noopener noreferrer"
         aria-label={`Learn more about ${cardTitle}`}
       >
-        <span>Learn more</span>
+        <span>{t("landingPage.services.learnMoreText")}</span>
         <img src="../../../assets/svg/landingPage/arrowRightBlue.svg" alt="" aria-hidden="true" />
       </a>
     </article>

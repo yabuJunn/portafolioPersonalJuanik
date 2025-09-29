@@ -43,6 +43,28 @@
             "videoTitle": "Video de presentación de Juanik",
             "imageAlt": "Retrato de Juanik",
             "graphicAlt": "Gráfico decorativo"
+        },
+        "projects": {
+            "sectionTitle": "Proyectos",
+            "title": "Proyectos en los que he trabajado",
+            "viewAllButton": "Ver todos mis proyectos",
+            "cards": {
+                "project1": {
+                    "title": "Tu camino a casa",
+                    "subtitle": "UX/UI para Constructora Jaramillo Mora",
+                    "description": "Diseñé y prototipé una plataforma web para mejorar la búsqueda y compra de vivienda. Realicé entrevistas de campo, mapeé flujos de usuario y lideré el desarrollo del prototipo funcional."
+                },
+                "project2": {
+                    "title": "Ludos: Biofonías",
+                    "subtitle": "Música en vivo & proyección mapping",
+                    "description": "Lideré la creación de una pieza audiovisual en vivo que combinó música compuesta y proyección mapping reactiva, generando un paisaje sonoro electroacústico inmersivo que interactuaba con lo visual."
+                },
+                "project3": {
+                    "title": "CAPY: Finanzas web",
+                    "subtitle": "Front-end para una plataforma web responsiva",
+                    "description": "Desarrollé un front-end responsivo enfocado en UX pulida y código de alta calidad con HTML/CSS y TypeScript, transformando diseños de alta fidelidad en un prototipo interactivo."
+                }
+            }
         }
     }
 }

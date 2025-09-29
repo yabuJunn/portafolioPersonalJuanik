@@ -43,6 +43,28 @@
             "videoTitle": "Presentation video by Juanik",
             "imageAlt": "Portrait of Juanik",
             "graphicAlt": "Decorative graphic"
+        },
+        "projects": {
+            "sectionTitle": "Projects",
+            "title": "Projects that I have worked on",
+            "viewAllButton": "View all my projects",
+            "cards": {
+                "project1": {
+                    "title": "Tu camino a casa",
+                    "subtitle": "UX/UI for Constructora Jaramillo Mora",
+                    "description": "I designed and prototyped a web platform to improve home search and purchase decisions. I conducted field interviews, mapped user flows, and led the development of the functional prototype."
+                },
+                "project2": {
+                    "title": "Ludos: Biofonías",
+                    "subtitle": "Live music & projection mapping",
+                    "description": "Led the creation of a live audiovisual piece combining composed music and reactive video projection mapping, generating an immersive electroacoustic soundscape that interacted with visuals."
+                },
+                "project3": {
+                    "title": "CAPY: Web finances",
+                    "subtitle": "Front-end for a responsive web platform",
+                    "description": "Built a responsive front-end focused on polished UX and high-quality code using HTML/CSS and TypeScript, translating high-fidelity designs into an interactive prototype."
+                }
+            }
         }
     }
 }
