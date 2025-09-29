@@ -65,6 +65,46 @@
                     "description": "Built a responsive front-end focused on polished UX and high-quality code using HTML/CSS and TypeScript, translating high-fidelity designs into an interactive prototype."
                 }
             }
+        },
+        "contact": {
+            "sectionTitle": "Let’s build immersive experiences that move people.",
+            "subtitle": "Contact me",
+            "paragraph": "Ready to bring your idea to life? I design and prototype interactive spaces, sonic identities, and digital products that blend art, technology and emotion. Tell me about your project; whether it’s a concept, a pilot, or a full production; and let’s make something memorable together.",
+            "form": {
+                "labels": {
+                    "name": "Name",
+                    "email": "Email",
+                    "service": "What services do you need?",
+                    "message": "Leave a message"
+                },
+                "placeholders": {
+                    "name": "Who are you? (Name please)",
+                    "email": "Where should I write back?",
+                    "service": "Choose a service",
+                    "message": "Tell me about your idea, goals or timeline…"
+                },
+                "selectOptions": {
+                    "interactiveSpaces": "Interactive Spaces",
+                    "sonicIdentities": "Sonic Identities",
+                    "digitalProducts": "Digital Products",
+                    "other": "Other"
+                },
+                "buttons": {
+                    "send": "Let’s talk!",
+                    "sending": "Sending…"
+                },
+                "validation": {
+                    "nameRequired": "Please enter your name.",
+                    "emailInvalid": "Please enter a valid email.",
+                    "serviceRequired": "Please select a service.",
+                    "messageRequired": "Please leave a short message."
+                },
+                "status": {
+                    "success": "Message sent! I will reply soon.",
+                    "error": "There was an error sending your message. Try again later."
+                }
+            },
+            "imageAlt": "Portrait Juanik"
         }
     }
 }

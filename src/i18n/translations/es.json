@@ -65,6 +65,46 @@
                     "description": "Desarrollé un front-end responsivo enfocado en UX pulida y código de alta calidad con HTML/CSS y TypeScript, transformando diseños de alta fidelidad en un prototipo interactivo."
                 }
             }
+        },
+        "contact": {
+            "sectionTitle": "Creemos experiencias inmersivas que conmuevan a las personas.",
+            "subtitle": "Contáctame",
+            "paragraph": "¿Listo para llevar tu idea a la realidad? Diseñemos y prototipemos espacios interactivos, identidades sonoras y productos digitales que integren arte, tecnología y emoción. Cuéntame sobre tu proyecto; ya sea un concepto, un piloto o una producción completa; y hagamos algo memorable juntos.",
+            "form": {
+                "labels": {
+                    "name": "Nombre",
+                    "email": "Correo",
+                    "service": "¿Qué servicios necesitas?",
+                    "message": "Deja un mensaje"
+                },
+                "placeholders": {
+                    "name": "¿Quién eres? (Por favor, tu nombre)",
+                    "email": "¿A qué correo te escribo?",
+                    "service": "Elige un servicio",
+                    "message": "Cuéntame sobre tu idea, objetivos o cronograma…"
+                },
+                "selectOptions": {
+                    "interactiveSpaces": "Espacios interactivos",
+                    "sonicIdentities": "Identidades sonoras",
+                    "digitalProducts": "Productos digitales",
+                    "other": "Otro"
+                },
+                "buttons": {
+                    "send": "¡Hablemos!",
+                    "sending": "Enviando…"
+                },
+                "validation": {
+                    "nameRequired": "Por favor ingresa tu nombre.",
+                    "emailInvalid": "Por favor ingresa un correo válido.",
+                    "serviceRequired": "Por favor selecciona un servicio.",
+                    "messageRequired": "Por favor deja un breve mensaje."
+                },
+                "status": {
+                    "success": "¡Mensaje enviado! Te responderé pronto.",
+                    "error": "Hubo un error al enviar tu mensaje. Intenta de nuevo más tarde."
+                }
+            },
+            "imageAlt": "Retrato de Juanik"
         }
     }
 }
