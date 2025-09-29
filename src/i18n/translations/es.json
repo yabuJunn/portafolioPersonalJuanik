@@ -13,6 +13,27 @@
             "subtitle": "Soy Diseñador de Medios Interactivos y Músico, enfocado en crear experiencias inmersivas que mezclan arte, tecnología y sonido. Combino UX/UI, programación creativa y producción musical para desarrollar proyectos innovadores que inspiran y generan impacto real.",
             "portfolioButton": "Ver mi portafolio",
             "hireButton": "Contrátame"
+        },
+        "services": {
+            "sectionTitle": "Servicios",
+            "highlightText": "Servicios",
+            "titleText": "que ofrezco",
+            "actionButton": "Ver mis servicios",
+            "cards": {
+                "uxui": {
+                    "title": "Diseño UX / UI",
+                    "description": "Diseño de interfaces y flujos centrados en el usuario: wireframes, prototipos navegables y pruebas de usabilidad para productos digitales que maximizan la experiencia y conversión."
+                },
+                "interactive": {
+                    "title": "Experiencias Interactivas & Prototipado",
+                    "description": "Creación de instalaciones y prototipos interactivos (web, sensores, mapping) que combinan sonido, visuales y hardware para eventos, museos y espacios experienciales."
+                },
+                "music": {
+                    "title": "Producción Musical & Diseño Sonoro",
+                    "description": "Composición, diseño de texturas sonoras, mezcla y creación de branding sonoro para proyectos multimedia, instalaciones y contenidos audiovisuales. Entrega de stems y guías de uso."
+                }
+            },
+            "learnMoreText": "Más información"
         }
     }
 }

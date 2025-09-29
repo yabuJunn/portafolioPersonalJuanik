@@ -3,6 +3,7 @@ import "./landingServicesSection.css";
 import { ButtonWithIcon } from "../../buttons/buttonWhithIcon/buttonWhithIcon";
 import { LandingTitleText } from "../landingTitleText/landingTitleText";
 import { LandingServicesCards } from "../landingServicesCards/landingServicesCards";
+import { useI18n } from "../../../i18n";
 
 import arrowRigthDark from "../../../assets/svg/landingPage/arrowRightDark.svg";
 import desktopIconBlue from "../../../assets/svg/icons/desktopIconBlue.svg";
@@ -10,6 +11,8 @@ import musicIconBlue from "../../../assets/svg/icons/musicIconBlue.svg";
 import personIconBlue from "../../../assets/svg/icons/personIconBlue.svg";
 
 export const LandingServicesSection = () => {
+  const { t } = useI18n();
+
   return (
     <section
       className={"landingPage-section landingPage-services"}
@@ -18,15 +21,18 @@ export const LandingServicesSection = () => {
     >
       <div className={"landingPage-services-content-text-header-container"}>
         <h3 id="services-title" className={"landingPage-services-content-text-header-title"}>
-          Services
+          {t("landingPage.services.sectionTitle")}
         </h3>
 
         <div className={"landingPage-services-content-text-header"}>
-          <LandingTitleText highlightText="Services" titleText="that I provide" />
+          <LandingTitleText
+            highlightText={t("landingPage.services.highlightText")}
+            titleText={t("landingPage.services.titleText")}
+          />
 
           <div className="services-header-action">
             <ButtonWithIcon
-              text="View my projects"
+              text={t("landingPage.services.actionButton")}
               icon={arrowRigthDark}
               bgColor="#FF6F3C"
               hoverTextColor="#FFFDFB"
@@ -39,18 +45,18 @@ export const LandingServicesSection = () => {
 
         <div className={"landingPage-services-cards-container"}>
           <LandingServicesCards
-            cardTitle="Diseño UX / UI"
-            cardDescription="Diseño de interfaces y flujos centrados en el usuario: wireframes, prototipos navegables y pruebas de usabilidad para productos digitales que maximizan la experiencia y conversión."
+            cardTitle={t("landingPage.services.cards.uxui.title")}
+            cardDescription={t("landingPage.services.cards.uxui.description")}
             cardIcon={personIconBlue}
           />
           <LandingServicesCards
-            cardTitle="Experiencias Interactivas & Prototipado"
-            cardDescription="Creación de instalaciones y prototipos interactivos (web, sensores, mapping) que combinan sonido, visuales y hardware para eventos, museos y espacios experienciales."
+            cardTitle={t("landingPage.services.cards.interactive.title")}
+            cardDescription={t("landingPage.services.cards.interactive.description")}
             cardIcon={desktopIconBlue}
           />
           <LandingServicesCards
-            cardTitle="Producción Musical & Diseño Sonoro"
-            cardDescription="Composición, diseño de texturas sonoras, mezcla y creación de branding sonoro para proyectos multimedia, instalaciones y contenidos audiovisuales. Entrega de stems y guías de uso."
+            cardTitle={t("landingPage.services.cards.music.title")}
+            cardDescription={t("landingPage.services.cards.music.description")}
             cardIcon={musicIconBlue}
           />
         </div>

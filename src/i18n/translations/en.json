@@ -13,6 +13,27 @@
             "subtitle": "I’m an Interactive Media Designer and Musician, focused on creating immersive user experiences that merge art, technology, and sound. I combine UX/UI design, creative coding, and music production to develop innovative projects that inspire and generate real impact.",
             "portfolioButton": "View my portfolio",
             "hireButton": "Hire me"
+        },
+        "services": {
+            "sectionTitle": "Services",
+            "highlightText": "Services",
+            "titleText": "that I provide",
+            "actionButton": "View my services",
+            "cards": {
+                "uxui": {
+                    "title": "UX / UI Design",
+                    "description": "Design of user-centered interfaces and flows: wireframes, clickable prototypes, and usability testing for digital products that maximize experience and conversion."
+                },
+                "interactive": {
+                    "title": "Interactive Experiences & Prototyping",
+                    "description": "Creation of installations and interactive prototypes (web, sensors, mapping) that combine sound, visuals, and hardware for events, museums, and experiential spaces."
+                },
+                "music": {
+                    "title": "Music Production & Sound Design",
+                    "description": "Composition, sound textures design, mixing, and sonic branding for multimedia projects, installations, and audiovisual content. Delivery of stems and usage guidelines."
+                }
+            },
+            "learnMoreText": "Learn more"
         }
     }
 }

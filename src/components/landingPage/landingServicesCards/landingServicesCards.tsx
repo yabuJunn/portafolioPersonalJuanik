@@ -1,6 +1,7 @@
 import "./landingServicesCards.css";
 
 import arrowRigthBlue from "../../../assets/svg/landingPage/arrowRightBlue.svg";
+import { useI18n } from "../../../i18n";
 
 type LandingServicesCardsProps = {
     cardTitle: string;
@@ -9,6 +10,8 @@ type LandingServicesCardsProps = {
 };
 
 export const LandingServicesCards = ({ cardTitle, cardDescription, cardIcon }: LandingServicesCardsProps) => {
+    const { t } = useI18n()
+
     return (
         <article className="landing-services-card" aria-labelledby={`srv-${cardTitle.replace(/\s+/g, "-").toLowerCase()}`}>
             <div className="landing-services-card-top">
@@ -28,7 +31,6 @@ export const LandingServicesCards = ({ cardTitle, cardDescription, cardIcon }: L
                 role="button"
                 tabIndex={0}
                 onClick={() => {
-                    /* placeholder action — replace with navigation or modal if needed */
                     console.log("Learn more clicked:", cardTitle);
                 }}
                 onKeyDown={(e) => {
@@ -39,7 +41,7 @@ export const LandingServicesCards = ({ cardTitle, cardDescription, cardIcon }: L
                 }}
                 aria-label={`Learn more about ${cardTitle}`}
             >
-                <span>Learn more</span>
+                <span>{t("landingPage.services.learnMoreText")}</span>
                 <img src={arrowRigthBlue} alt="" aria-hidden="true" />
             </div>
         </article>
