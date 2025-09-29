@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./landingPageNavigation.css";
 
 import { MainButton } from "../../buttons/mainButton/mainButton";
+import { LanguageSwitcher } from "../../language/languageSwitcher/languageSwitcher";
 import logoJI from "../../../assets/svg/logoJI.svg";
 
 export const LandingPageNavigation = () => {
@@ -37,6 +38,8 @@ export const LandingPageNavigation = () => {
           tabIndex={0}
           onKeyDown={(e) => (e.key === "Enter" ? scrollTo("headerSection") : null)}
         />
+
+        <LanguageSwitcher></LanguageSwitcher>
 
         {/* desktop / tablet menu */}
         <ul className="nav-list">

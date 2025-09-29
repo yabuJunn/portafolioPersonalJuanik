@@ -1,5 +1,7 @@
 import "./landingHeaderSection.css"
 
+import { useI18n } from "../../../i18n"
+
 import { ButtonWithIcon } from "../../buttons/buttonWhithIcon/buttonWhithIcon"
 import { MainButton } from "../../buttons/mainButton/mainButton"
 
@@ -7,17 +9,18 @@ import landingPageHeaderImage from "../../../assets/webp/landingPageHeaderPhoto.
 import arrowRigthDark from "../../../assets/svg/landingPage/arrowRightDark.svg"
 
 export const LandingHeaderSectionContent = () => {
+    const { t } = useI18n()
     return <>
         <div className={"landingPage-header-content-text"} id={"headerSection"}>
-            <h1>Hello I’m <span>Juanik</span>,<br></br> Interactive Media Designer & Music Producer</h1>
-            <p>I’m an Interactive Media Designer and Musician, focused on creating immersive user experiences that merge art, technology, and sound. I combine UX/UI design, creative coding, and music production to develop innovative projects that inspire and generate real impact.</p>
+            <h1 dangerouslySetInnerHTML={{ __html: t("landingPage.header.title", { name: "Juanik" }) }}></h1>
+            <p>{t("landingPage.header.subtitle")}</p>
 
             <div className={"landingPage-header-content-text-buttons"}>
-                <ButtonWithIcon text="View my portfolio" icon={arrowRigthDark} bgColor="#FF6F3C" hoverTextColor="#FFFDFB" actionFunction={() => { console.log("View my portfolio clicked") }} />
+                <ButtonWithIcon text={t("landingPage.header.portfolioButton")} icon={arrowRigthDark} bgColor="#FF6F3C" hoverTextColor="#FFFDFB" actionFunction={() => { console.log("View my portfolio clicked") }} />
 
-                <MainButton text="Hire me" actionFunction={() => {
-                    const section = document.getElementById("contactSection"); // 👈 id del destino
-                    section?.scrollIntoView({ behavior: "smooth" }); // 👈 scroll suave
+                <MainButton text={t("landingPage.header.hireButton")} actionFunction={() => {
+                    const section = document.getElementById("contactSection");
+                    section?.scrollIntoView({ behavior: "smooth" });
                 }} />
             </div>
         </div>
