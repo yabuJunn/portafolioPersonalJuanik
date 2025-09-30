@@ -26,6 +26,10 @@ export const LandingPageNavigation = () => {
 
   const scrollTo = (id?: string) => {
     setOpen(false);
+    if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
     if (!id) return;
     const section = document.getElementById(id);
     section?.scrollIntoView({ behavior: "smooth" });
@@ -39,16 +43,16 @@ export const LandingPageNavigation = () => {
           src={logoJI}
           alt="logo"
           role="button"
-          onClick={() => scrollTo("headerSection")}
+          onClick={() => scrollTo("top")}
           tabIndex={0}
-          onKeyDown={(e) => (e.key === "Enter" ? scrollTo("headerSection") : null)}
+          onKeyDown={(e) => (e.key === "Enter" ? scrollTo("top") : null)}
         />
 
         <LanguageSwitcher></LanguageSwitcher>
 
         {/* desktop / tablet menu */}
         <ul className="nav-list">
-          <li onClick={() => scrollTo("headerSection")}>{t("landingPage.nav.home")}</li>
+          <li onClick={() => scrollTo("top")}>{t("landingPage.nav.home")}</li>
           <li onClick={() => scrollTo("servicesSection")}>{t("landingPage.nav.services")}</li>
           <li onClick={() => scrollTo("aboutMeSection")}>{t("landingPage.nav.aboutMe")}</li>
           <li onClick={() => scrollTo("projectsSection")}>{t("landingPage.nav.projects")}</li>
@@ -85,7 +89,7 @@ export const LandingPageNavigation = () => {
         <div className="nav-overlay-inner">
           <img src={logoJI} alt="logo" className="overlay-logo" onClick={() => scrollTo("headerSection")} />
           <ul className="overlay-list">
-            <li onClick={() => scrollTo("headerSection")}>{t("landingPage.nav.home")}</li>
+            <li onClick={() => scrollTo("top")}>{t("landingPage.nav.home")}</li>
             <li onClick={() => scrollTo("servicesSection")}>{t("landingPage.nav.services")}</li>
             <li onClick={() => scrollTo("aboutMeSection")}>{t("landingPage.nav.aboutMe")}</li>
             <li onClick={() => scrollTo("projectsSection")}>{t("landingPage.nav.projects")}</li>

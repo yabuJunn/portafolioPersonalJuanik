@@ -1,3 +1,5 @@
+import "./languageSwitcher.css"
+
 import React from "react";
 import { useI18n } from "../../../i18n";
 
@@ -7,6 +9,7 @@ export const LanguageSwitcher: React.FC = () => {
     return (
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
             <button
+                className="languageSwitcher-button"
                 onClick={() => setLang("en")}
                 aria-pressed={lang === "en"}
                 style={{
@@ -21,6 +24,7 @@ export const LanguageSwitcher: React.FC = () => {
                 EN
             </button>
             <button
+                className="languageSwitcher-button"
                 onClick={() => setLang("es")}
                 aria-pressed={lang === "es"}
                 style={{
