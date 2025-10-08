@@ -49,7 +49,7 @@ export const LandingAboutMeSection = () => {
                 <div className="landingPage-aboutMe-video-wrapper">
                     <iframe
                         className="landingPage-aboutMe-video"
-                        src="https://www.youtube.com/embed/ew9it84yxzU?si=3dJ8Yej9Usnduy3k"
+                        src="https://www.youtube.com/embed/LdQ0Ux1ENMU?si=7yXvSgvcvB9zNEAe"
                         title={t("landingPage.about.videoTitle")}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
